@@ -13,6 +13,7 @@ const browserSync = require('browser-sync').create();
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+const jshint = require("gulp-jshint");
 
 const paths = {
   root: './build',
@@ -68,13 +69,22 @@ function clean() {
   return del(paths.root);
 }
 
+// JSLint Task
+function lint() {
+  return gulp.src(paths.scripts.src)
+    .pipe(jshint())
+    .pipe(jshint.reporter("default"));
+}
+
 // webpack
-function scripts() {
+function jsScripts() {
   return gulp
     .src('src/scripts/app.js')
     .pipe(gulpWebpack(webpackConfig, webpack))
     .pipe(gulp.dest(paths.scripts.dest));
 }
+
+let scripts = gulp.series(lint,jsScripts);
 
 // галповский вотчер
 function watch() {
