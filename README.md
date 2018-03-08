@@ -1,4 +1,4 @@
-## Gulp-webpack 2018
+## Gulp-webpack 2018 Лебедев Андрей
 
 #### Расширение сборки Димы https://github.com/kovaldn/gulp-webpack-2018-dima
 
