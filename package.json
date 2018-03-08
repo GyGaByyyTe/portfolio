@@ -10,6 +10,10 @@
   "author": "Andrei Lebedev",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
