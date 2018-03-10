@@ -1,8 +1,6 @@
 #slides{
     position: relative;
     height: 300px;
-    padding: 0px;
-    margin: 0px;
     list-style-type: none;
 }
 .slide{
@@ -63,10 +61,6 @@
 .controls:focus{
     background: #eee;
     color: #333;
-}
-
-.container{
-    position: relative;
 }
 
 .buttons{
