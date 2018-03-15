@@ -1,13 +1,43 @@
 extends ../template
 
 block variables
-    - var title = 'Добро пожаловать'
+    - var title = 'Личный сайт веб разработчика Андрея Лебедева'
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    section.section.index
+        .index__top
+            .authorization-btn Авторизоваться
+        .index__center
+            .user.index__user
+                .user__pic
+                    img.user__pic-img
+                .user__description
+                    .user__name Лебедев Андрей
+                    .user__info Личный сайт разработчика
+            .index__socials
+                ul.socials
+                    - 
+                        var socialLinks = [
+                            ['vk',  'assets/images/icons/vk.svg',     'https://vk.com/gygabyyyte' ],
+                            ['git', 'assets/images/icons/github.svg', 'https://github.com/GyGaByyyTe' ],
+                            ['in',  'assets/images/icons/in.svg',     'https://vk.com/gygabyyyte' ]
+                        ]                
+                    each item in socialLinks
+                        li.socials__item
+                            a(href=`${item[2]}` target='_blank' class='socials__link')  
+                                svg(class=`socials__svg socials__svg--${item[0]}`)
+                                    use(xlink:href=`${item[1]}`)
+            .index__menu
+                ul.menu
+                    - 
+                        var internalLinks = [
+                            ['Мои работы', 'works.html'],
+                            ['Обо мне',    'about.html'],
+                            ['Блог',       'blog.html']
+                        ]                   
+                    each item in internalLinks
+                        li.menu__item
+                            a(href=`${item[1]}` class='menu__link') #{item[0]}
+        .index__bot
+            .copyright
+                p © Андрей Лебедев | создано с любовью в LoftSchool | 2018

@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Добро пожаловать</title>
+    <title>Личный сайт веб разработчика Андрея Лебедева</title>
+    <meta content="" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -11,20 +12,49 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Главная</h1>
-    <form>
-      <label for="email">email</label>
-      <input name="email" id="email">
-      <label for="password">password</label>
-      <input name="password" id="password">
-      <button>Войти</button>
-    </form>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <div class="wrapper">
+      <section class="section index">
+        <div class="index__top">
+          <div class="authorization-btn">Авторизоваться</div>
+        </div>
+        <div class="index__center">
+          <div class="user index__user">
+            <div class="user__pic"><img class="user__pic-img"></div>
+            <div class="user__description">
+              <div class="user__name">Лебедев Андрей</div>
+              <div class="user__info">Личный сайт разработчика</div>
+            </div>
+          </div>
+          <div class="index__socials">
+            <ul class="socials">
+              <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                  <svg class="socials__svg socials__svg--vk">
+                    <use xlink:href="assets/images/icons/vk.svg"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="https://github.com/GyGaByyyTe" target="_blank"> 
+                  <svg class="socials__svg socials__svg--git">
+                    <use xlink:href="assets/images/icons/github.svg"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                  <svg class="socials__svg socials__svg--in">
+                    <use xlink:href="assets/images/icons/in.svg"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="index__menu">
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="works.html">Мои работы</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
+              <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="index__bot">
+          <div class="copyright">
+            <p>© Андрей Лебедев | создано с любовью в LoftSchool | 2018</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

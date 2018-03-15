@@ -29,6 +29,7 @@
     "webpack": "^4.1.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "npm": "^5.7.1"
   }
 }
