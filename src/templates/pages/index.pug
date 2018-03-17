@@ -28,8 +28,8 @@ block content
                                 a(href=`${item[2]}` target='_blank' class='socials__link')  
                                     svg(class=`socials__svg socials__svg--${item[0]}`)
                                         use(xlink:href=`${item[1]}`)
-                .index__menu
-                    ul.menu
+                .index__pages
+                    ul.pages
                         - 
                             var internalLinks = [
                                 ['Мои работы', 'works.html'],
@@ -37,8 +37,8 @@ block content
                                 ['Блог',       'blog.html']
                             ]                   
                         each item in internalLinks
-                            li.menu__item
-                                a(href=`${item[1]}` class='menu__link') #{item[0]}
+                            li.pages__item
+                                a(href=`${item[1]}` class='pages__link') #{item[0]}
         .index__bot
             .copyright
-                p © Андрей Лебедев | создано с любовью в LoftSchool | 2018
+                p © Андрей Лебедев | Cоздано с любовью в LoftSchool | 2018

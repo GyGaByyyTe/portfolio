@@ -9,17 +9,23 @@
 @import 'base/base';
 
 //Ипортируем Cтили для отдельных элементов страницы
+@import 'layout/hero';
 @import 'layout/socials';
 @import 'layout/copyright';
 @import 'layout/user';
+@import 'layout/footer';
+@import 'layout/article';
+@import 'layout/menu';
+
 
 //Ипортируем Стили отдельных компонентов
-@import 'components/menu';
+@import 'components/pages';
 @import 'components/slider';
 @import 'components/buttons';
 
 //Ипортируем Персональные стили для страниц
 @import 'pages/index';
+@import 'pages/blog';
 
 //Ипортируем Персональные стили для тем
 // @import 'themes/default';

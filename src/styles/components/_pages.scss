@@ -1,7 +1,7 @@
-.menu {
+.pages {
   font-size: 0;
 }
-.menu__item {
+.pages__item {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -30,7 +30,7 @@
     }
   }
 }
-.menu__link {
+.pages__link {
   position: relative;
   display: inline-block;
   @include font-roboto(16px, 500);

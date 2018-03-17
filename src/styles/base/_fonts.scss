@@ -1,19 +1,41 @@
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/fontawesome-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/fontawesome-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SansusWebissimo';
+  src: url('../fonts/sansus-webissimo-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SansusWebissimo';
+  src: url('../fonts/sansus-webissimo-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @mixin font-roboto($size, $weight) {
   font-family: 'Roboto', sans-serif;
   font-size: rem($size);
   font-weight: $weight;
 }
+@mixin font-awesome($size, $weight) {
+  font-family: 'Fontawesome', sans-serif;
+  font-size: rem($size);
+  font-weight: $weight;
+}
+@mixin font-sansus($size, $weight) {
+  font-family: 'SansusWebissimo', sans-serif;
+  font-size: rem($size);
+  font-weight: $weight;
+}
 
-// @font-face {
-//     font-family: 'Gagalin';
-//     src: url("../fonts/Gagalin-Regular.woff2") format("woff2"), url("Gagalin-Regular.woff") format("woff");
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Lifehack';
-//     src: url("../fonts/Lifehack-Medium.woff2") format("woff2"), url("Lifehack-Medium.woff") format("woff");
-//     font-weight: 500;
-//     font-style: normal;
-// }

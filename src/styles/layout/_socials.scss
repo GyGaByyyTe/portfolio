@@ -1,5 +1,9 @@
 .socials {
   text-align: center;
+
+  &--footer {
+    text-align: left;
+  }
 }
 
 .socials__item {
@@ -14,10 +18,11 @@
 
 .socials__link {
   display: inline-block;
-
 }
 
 .socials__svg {
+  vertical-align: middle;
+  overflow: hidden;  
   fill: #fff;
   background-color: $color_dark;
 

@@ -1,0 +1,24 @@
+.article {
+
+}
+
+.article__header {
+  @include font-sansus(35px, 400);
+}
+.article__date {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  @include font-roboto(16px, 400);
+  opacity: 0.7;
+  color: $color_green_hover;
+  line-height: 2rem;
+}
+.article__content {
+  @include font-roboto(16px, 400);
+  color: $color_dark;
+  line-height: 1.65rem;
+
+  p {
+    margin-bottom: 0.6rem;
+  }
+}

@@ -1,17 +1,90 @@
 extends ../template
 
 block variables
-    - var title = 'Блог'
+    - var title = 'Личный сайт веб разработчика Андрея Лебедева | Блог'
 
 block content
-    h1 Блог
-    ul
-        li
-            h2 Заголовок статьи
-            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-        li
-            h2 Ещё статья
-            p Далеко-далеко за словесными горами в стране.
-        li
-            h2 Последняя статья
-            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Курсивных то осталось за.
+    section.section.hero
+        .hero__center
+            .user
+                .user__pic
+                    img(src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index" class="user__pic-img")
+            .hero__description
+                h2.hero__header Блог
+                .hero__info Статьи, которые я написал  
+
+    section.section.blog
+        - 
+            var articleList = [
+                ['Самое важное в SASS', 
+                    '22 ноября 2016', 
+                    ['Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия',
+                        'Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.'] ],
+                ['Приёмы в вёрстке, без которых не обходится ни один сайт', 
+                    '13 ноября 2016', 
+                    ['Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.',
+                        'Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.']],
+                ['Самый необходимый набор Gulp плагинов', 
+                    '3 ноября 2018', 
+                    ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minima quas suscipit voluptate ipsam! Fugiat, quaerat nam. Modi sapiente dolores obcaecati iusto eum ipsa? Quibusdam ipsam minus veniam natus quam ullam repudiandae consequatur, quisquam accusantium aperiam',
+                        'Sunt sint laudantium sed dignissimos facere aliquid quia labore dicta temporibus est? Voluptas, labore.'] ],
+                ['Почему я выбрал Jade', 
+                    '5 марта 2018', 
+                    ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minima quas suscipit voluptate ipsam! Fugiat, quaerat nam. Modi sapiente dolores obcaecati iusto eum ipsa? Quibusdam ipsam minus veniam natus quam ullam repudiandae consequatur.',
+                        'Quisquam accusantium aperiam, sunt sint laudantium sed dignissimos facere aliquid quia labore dicta temporibus est? Voluptas, labore.'] ]
+            ]      
+        aside.blog__aside
+            ul.blog__aside-list               
+                each item in articleList
+                    li.blog__aside-item
+                        a(href='#' class='blog__aside-link')= item[0]  
+        main.blog__main
+            ul.blog_article-list
+                - for (var i=0; i<4; i++)           
+                    li.blog__article
+                        .article
+                            .article__header= articleList[i][0]
+                            .article__date= articleList[i][1]               
+                            .article__content
+                                each item in articleList[i][2]                            
+                                    p= item                                                                                 
+
+
+block footer
+    footer.footer
+        .footer__top
+            ul.footer__list
+                li.footer__item
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                li.footer__item
+                    ul.menu
+                        - 
+                            var internalLinks = [
+                                ['Мои работы',  'works.html'],
+                                ['Обо мне',     'about.html'],
+                                ['Блог',        'blog.html'],
+                                ['Авторизация', 'index.html'],
+                            ]                   
+                        each item in internalLinks
+                            li.menu__item
+                                a(href=`${item[1]}` class='menu__link') #{item[0]}
+                    .footer__socials
+                        ul.socials.socials--footer
+                            - 
+                                var socialLinks = [
+                                    ['vk',  'assets/images/icons/vk.svg',     'https://vk.com/gygabyyyte' ],
+                                    ['git', 'assets/images/icons/github.svg', 'https://github.com/GyGaByyyTe' ],
+                                    ['in',  'assets/images/icons/in.svg',     'https://vk.com/gygabyyyte' ]
+                                ]                
+                            each item in socialLinks
+                                li.socials__item
+                                    a(href=`${item[2]}` target='_blank' class='socials__link')  
+                                        svg(class=`socials__svg socials__svg--${item[0]}`)
+                                            use(xlink:href=`${item[1]}`)                                
+                li.footer__item
+                    .footer__cite
+                        p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                        span — Martin Golding
+        .footer__bot
+            .copyright.copyright--footer
+                p © Андрей Лебедев | Cоздано с любовью в LoftSchool | 2018        

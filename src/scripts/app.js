@@ -2,4 +2,5 @@ const slider = require('./common/slider');
 
 slider(); // инициализируем слайдер
 
-const a = 10;
+const activeArticleLink = document.querySelector('.blog__aside-item');
+activeArticleLink.setAttribute('class', 'blog__aside-item blog__aside-item--active');

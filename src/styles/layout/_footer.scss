@@ -1,0 +1,41 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer__list {
+  padding-top: 1.4rem;
+  padding-bottom: 1.16rem;
+  @include flex-prop;
+  align-items: flex-start;
+  background-color: $color_gray;
+  opacity: 0.85;
+  @include font-roboto(16px, 300);
+  color: $color_white;
+}
+.footer__item {
+  width: 33%;
+  line-height: 1.45rem;
+  padding: 0 2.5%;
+  text-align: justify;
+  line-height: 1.45rem;
+}
+.footer__socials {
+  margin-top: 1rem;
+}
+.footer__cite {
+  opacity: 0.5;
+  font-style: italic;
+  @include font-roboto(16px, 300);
+  line-height: 1.63rem;
+  span {
+    font-weight: 700;
+  }
+}
+.footer__bot {
+  padding: 0.55rem;
+  background-color: $color_green;
+  opacity: 0.85;
+  text-align: center;
+}

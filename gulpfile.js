@@ -139,15 +139,15 @@ gulp.task(
   'default',
   gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scriptsDev),
+    gulp.parallel(styles, templates, images, scriptsDev, fonts),
     gulp.parallel(watch, server)
   )
 );
 gulp.task(
   'dev',
-  gulp.series(clean, gulp.parallel(styles, templates, images, scriptsDev))
+  gulp.series(clean, gulp.parallel(fonts,styles, templates, images, scriptsDev))
 );
 gulp.task(
   'prod',
-  gulp.series(clean, gulp.parallel(styles, templates, images, scriptsProd))
+  gulp.series(clean, gulp.parallel(fonts,styles, templates, images, scriptsProd))
 );

@@ -1,3 +1,8 @@
 .copyright {
-    @include font-roboto(16px,400);
+  @include font-roboto(16px, 400);
+
+  &--footer {
+    @include font-roboto(16px, 300);
+    color: $color_white;
+  }
 }

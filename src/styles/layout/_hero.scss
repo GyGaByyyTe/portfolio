@@ -1,0 +1,41 @@
+.hero {
+  background-image: url('../images/backgrounds/back_index.jpg');
+  max-height: 440px;
+  color: $color_white;
+
+  @include flex-prop;
+  justify-content: center;
+  align-items: centerl;
+}
+
+.hero__center {
+    padding-top: 1.5%;
+}
+
+.hero__description {
+  text-align: center;
+  margin-top: 1rem;  
+}
+.hero__header {
+  position: relative;
+  @include font-sansus(63px, 400);
+
+  text-transform: uppercase;
+
+  padding-bottom: 8%;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 45%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);    
+    border-bottom: 3px solid $color_white;
+  }
+}
+
+.hero__info {
+    margin-top: 15%;
+    @include font-roboto(16px,400);
+}
