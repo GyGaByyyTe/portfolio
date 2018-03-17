@@ -1,3 +1,9 @@
+@mixin font-roboto($size, $weight) {
+  font-family: 'Roboto', sans-serif;
+  font-size: rem($size);
+  font-weight: $weight;
+}
+
 // @font-face {
 //     font-family: 'Gagalin';
 //     src: url("../fonts/Gagalin-Regular.woff2") format("woff2"), url("Gagalin-Regular.woff") format("woff");

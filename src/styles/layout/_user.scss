@@ -1,0 +1,21 @@
+.user {
+  text-align: center;
+}
+
+.user__name {
+  @include font-roboto(28px, 500);
+}
+.user__info {
+  @include font-roboto(16px, 400);
+  opacity: 0.8;
+  margin-top: 2%;
+}
+
+.user__description {
+  margin-top: 3%;
+}
+
+.user__pic-img {
+  border-radius: 50%;
+  overflow: hidden;
+}

@@ -82,3 +82,7 @@ a {
   margin: 0 auto;
   position: relative;
 }
+
+.section {
+  @include section-prop;
+}

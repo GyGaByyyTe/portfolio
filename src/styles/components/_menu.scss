@@ -1,0 +1,41 @@
+.menu {
+  font-size: 0;
+}
+.menu__item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  &:first-child {
+    border-bottom-left-radius: 5px;
+  }
+  &:last-child {
+    border-bottom-right-radius: 5px;
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #dee3e7;
+    opacity: 0.5;
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
+.menu__link {
+  position: relative;
+  display: inline-block;
+  @include font-roboto(16px, 500);
+  padding: 0.75rem 2rem;
+  background-color: $color_green;
+
+  @include hover-anim-one(background-color,$color_green_hover);
+}

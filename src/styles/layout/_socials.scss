@@ -1,6 +1,27 @@
+.socials {
+  text-align: center;
+}
+
+.socials__item {
+  font-size: 0;
+  display: inline-block;
+  margin-right: 6%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__link {
+  display: inline-block;
+
+}
+
 .socials__svg {
-  fill: #FFF;
+  fill: #fff;
   background-color: $color_dark;
+
+  @include hover-anim-one(background-color,$color_green_hover);
 
   &--vk {
     width: 31px;
