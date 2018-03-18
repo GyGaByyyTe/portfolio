@@ -1,14 +1,17 @@
 @import 'normalize.css/normalize';
 
 // Импортируем все переменные, миксины и т.д.
+// @import 'abstracts/**/*';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
 // Импортируем базовые стили
+// @import "base/**/*.scss";
 @import 'base/fonts';
 @import 'base/base';
 
 //Ипортируем Cтили для отдельных элементов страницы
+// @import "layout/**/*.scss";
 @import 'layout/hero';
 @import 'layout/socials';
 @import 'layout/copyright';
@@ -21,6 +24,7 @@
 
 
 //Ипортируем Стили отдельных компонентов
+// @import "components/**/*.scss";
 @import 'components/pages';
 @import 'components/slider';
 @import 'components/buttons';
@@ -28,9 +32,16 @@
 @import 'components/form';
 
 //Ипортируем Персональные стили для страниц
+// @import "pages/**/*.scss";
 @import 'pages/index';
 @import 'pages/blog';
 @import 'pages/works';
 
 //Ипортируем Персональные стили для тем
+// @import "themes/**/*.scss";
 // @import 'themes/default';
+
+
+
+
+

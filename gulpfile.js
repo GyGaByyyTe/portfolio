@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const path = require('path');
 
+const sassGlob = require('gulp-sass-glob');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
@@ -62,6 +63,7 @@ function styles() {
   return gulp
     .src('./src/styles/styles.scss')
     .pipe(sourcemaps.init())
+    // .pipe(sassGlob())
     .pipe(
       sass({
         outputStyle: 'compressed',
