@@ -11,6 +11,11 @@
     width: 50%;
     @include font-roboto(16px, 400);
     font-style: italic;
+
+    &-img {
+      border-radius: 50%;
+    }
+
   }
 
   &__text {
