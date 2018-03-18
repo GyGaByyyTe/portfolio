@@ -1,8 +1,98 @@
 extends ../template
 
 block variables
-    - var title = 'Обо мне'
+    - var title = 'Личный сайт веб разработчика Андрея Лебедева | Обо мне'
+    - var wrapper = 'wrapper' 
 
 block content
-    h1 Обо мне
-    include ../common/technologies.pug
+    section.section.hero
+        .hero__top
+            .hero__top-left
+                - 
+                    var socialLinks = [
+                        ['vk',  'assets/images/sprite.svg#vk',     'https://vk.com/gygabyyyte' ],
+                        ['git', 'assets/images/sprite.svg#github', 'https://github.com/GyGaByyyTe' ],
+                        ['in',  'assets/images/sprite.svg#in',     'https://vk.com/gygabyyyte' ],
+                    ]                      
+                include ../common/socials.pug
+                +socials('socials--align_left',socialLinks)  
+
+            .hero__top-right
+                .hamburger                
+                    a(href='#' class='hamburger__link') Меню
+                        svg(class='hamburger__svg')
+                            use(xlink:href='assets/images/sprite.svg#hamburger') 
+
+        .hero__center
+            .user
+                .user__pic
+                    img(src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index" class="user__pic-img")
+                .user__description
+                    .user__name Лебедев Андрей
+                    .user__info Личный сайт веб разработчика 
+        .hero__button
+            svg(class='hero__button-svg')
+                use(xlink:href='assets/images/sprite.svg#arrow_down')   
+
+    section.section.about 
+        .about__left
+            h2.section__header.section__header--color_black.about__header Обо мне
+            img(src="./assets/images/userfiles/avatars/ava_about_1.png" alt="ava_about_1" class="about__img")
+            .about__title Кто я
+            .about__text
+                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .about__right
+            .about__title.about__title--right Чем я могу быть вам полезен
+            .about__text.about__text--right
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .about__skills
+                - 
+                    var skills = [
+                        {
+                            skillsType: 'Frontend',
+                            skillsList: ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                        },
+                        {
+                            skillsType: 'Backend',
+                            skillsList: ['PHP', 'mySQL', 'Node.js& npm', 'Mongo.db']
+                        },
+                        {
+                            skillsType: 'WorkFlow',
+                            skillsList: ['Git', 'Gulp', 'Bower']
+                        },                        
+                    ]
+                ul.skills
+                    each item in skills
+                        li.skills__item
+                            h4.skills__title= item.skillsType
+                            ul.skills__sublist
+                                each skill in item.skillsList
+                                    li.skills__exact-skill
+                                        .skills__name= skill
+                                        <svg class="skills__circle" viewBox='0 0 110 110'>
+                                            <circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+                                            <circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+                                        </svg>    
+
+    section.section.map
+        .map__contacts
+            .map__container   
+                .map__title Контакты
+                - 
+                    var infoArray = [
+                        ['assets/images/sprite.svg#skype',      'gygabyyyte' ],
+                        ['assets/images/sprite.svg#envelope2',  'gygabyyyte@gmail.com' ],
+                        ['assets/images/sprite.svg#phone2',     '+7 986 734 66 43' ],
+                        ['assets/images/sprite.svg#map_marker', 'г.Пенза, ул. Набережная р. Мойки' ],
+                    ]            
+                ul.map__info          
+                    each item in infoArray
+                        li.map__item 
+                            svg(class='map__svg')
+                                use(xlink:href=`${item[0]}`) 
+                            span.map__text= `${item[1]}`    
+
+block footer
+    include ../common/footer.pug
+    +footer

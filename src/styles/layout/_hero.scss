@@ -8,6 +8,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: centerl;
+
+  &--blog {
+    justify-content: initial;
+  }
 }
 
 .hero__top {

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Обо мне</title>
+    <title>Личный сайт веб разработчика Андрея Лебедева | Обо мне</title>
     <meta content="" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -13,16 +13,214 @@
     <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <div class="undefined">
-      <h1>Обо мне</h1>
-      <p>Я умею
-        <ul class="technologies">
-          <li><img src="assets/images/sass.svg"></li>
-          <li><img src="assets/images/pug.svg"></li>
-          <li><img src="assets/images/gulp.svg"></li>
-          <li><img src="assets/images/webpack.svg"></li>
-        </ul>
-      </p>
+    <div class="wrapper">
+      <section class="section hero">
+        <div class="hero__top">
+          <div class="hero__top-left">
+                        <ul class="socials socials--align_left">             
+                          <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                              <svg class="socials__svg">
+                                <use xlink:href="assets/images/sprite.svg#vk">   </use>
+                              </svg></a></li>
+                          <li class="socials__item"><a class="socials__link" href="https://github.com/GyGaByyyTe" target="_blank"> 
+                              <svg class="socials__svg">
+                                <use xlink:href="assets/images/sprite.svg#github">   </use>
+                              </svg></a></li>
+                          <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                              <svg class="socials__svg">
+                                <use xlink:href="assets/images/sprite.svg#in">   </use>
+                              </svg></a></li>
+                        </ul>
+          </div>
+          <div class="hero__top-right">
+            <div class="hamburger">               <a class="hamburger__link" href="#">Меню
+                <svg class="hamburger__svg">
+                  <use xlink:href="assets/images/sprite.svg#hamburger"> </use>
+                </svg></a></div>
+          </div>
+        </div>
+        <div class="hero__center">
+          <div class="user">
+            <div class="user__pic"><img class="user__pic-img" src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index"></div>
+            <div class="user__description">
+              <div class="user__name">Лебедев Андрей</div>
+              <div class="user__info">Личный сайт веб разработчика </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__button">
+          <svg class="hero__button-svg">
+            <use xlink:href="assets/images/sprite.svg#arrow_down">  </use>
+          </svg>
+        </div>
+      </section>
+      <section class="section about"> 
+        <div class="about__left">
+          <h2 class="section__header section__header--color_black about__header">Обо мне</h2><img class="about__img" src="./assets/images/userfiles/avatars/ava_about_1.png" alt="ava_about_1">
+          <div class="about__title">Кто я</div>
+          <div class="about__text">
+            <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+            <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+          </div>
+        </div>
+        <div class="about__right">
+          <div class="about__title about__title--right">Чем я могу быть вам полезен</div>
+          <div class="about__text about__text--right">
+            <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
+          </div>
+          <div class="about__skills">
+            <ul class="skills">
+              <li class="skills__item">
+                <h4 class="skills__title">Frontend</h4>
+                <ul class="skills__sublist">
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">HTML5</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">CSS3</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">JavaScript &amp; jQuery</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                </ul>
+              </li>
+              <li class="skills__item">
+                <h4 class="skills__title">Backend</h4>
+                <ul class="skills__sublist">
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">PHP</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">mySQL</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">Node.js&amp; npm</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">Mongo.db</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                </ul>
+              </li>
+              <li class="skills__item">
+                <h4 class="skills__title">WorkFlow</h4>
+                <ul class="skills__sublist">
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">Git</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">Gulp</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                  <li class="skills__exact-skill">
+                    <div class="skills__name">Bower</div><svg class="skills__circle" viewBox='0 0 110 110'>
+<circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
+<circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
+</svg>    
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section map">
+        <div class="map__contacts">
+          <div class="map__container">  
+            <div class="map__title">Контакты</div>
+            <ul class="map__info">         
+              <li class="map__item"> 
+                <svg class="map__svg">
+                  <use xlink:href="assets/images/sprite.svg#skype"> </use>
+                </svg><span class="map__text">gygabyyyte</span>
+              </li>
+              <li class="map__item"> 
+                <svg class="map__svg">
+                  <use xlink:href="assets/images/sprite.svg#envelope2"> </use>
+                </svg><span class="map__text">gygabyyyte@gmail.com</span>
+              </li>
+              <li class="map__item"> 
+                <svg class="map__svg">
+                  <use xlink:href="assets/images/sprite.svg#phone2"> </use>
+                </svg><span class="map__text">+7 986 734 66 43</span>
+              </li>
+              <li class="map__item"> 
+                <svg class="map__svg">
+                  <use xlink:href="assets/images/sprite.svg#map_marker"> </use>
+                </svg><span class="map__text">г.Пенза, ул. Набережная р. Мойки</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+            <footer class="footer">
+              <div class="footer__top">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+                  </li>
+                  <li class="footer__item">
+                    <ul class="menu">
+                      <li class="menu__item"><a class="menu__link" href="works.html">Мои работы</a></li>
+                      <li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
+                      <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
+                      <li class="menu__item"><a class="menu__link" href="index.html">Авторизация</a></li>
+                    </ul>
+                    <div class="footer__socials">
+                                      <ul class="socials socials--align_left">             
+                                        <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                                            <svg class="socials__svg">
+                                              <use xlink:href="assets/images/sprite.svg#vk">   </use>
+                                            </svg></a></li>
+                                        <li class="socials__item"><a class="socials__link" href="https://github.com/GyGaByyyTe" target="_blank"> 
+                                            <svg class="socials__svg">
+                                              <use xlink:href="assets/images/sprite.svg#github">   </use>
+                                            </svg></a></li>
+                                        <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                                            <svg class="socials__svg">
+                                              <use xlink:href="assets/images/sprite.svg#in">   </use>
+                                            </svg></a></li>
+                                      </ul>
+                    </div>
+                  </li>
+                  <li class="footer__item">
+                    <div class="footer__cite">
+                      <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p><span>— Martin Golding</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__bot">
+                <div class="copyright copyright--footer">
+                  <p>© Андрей Лебедев | Cоздано с любовью в LoftSchool | 2018       </p>
+                </div>
+              </div>
+            </footer>
     </div>
   </body>
 </html>

@@ -19,7 +19,7 @@
 @import 'layout/footer';
 @import 'layout/article';
 @import 'layout/menu';
-@import 'layout/about';
+@import 'layout/reviews';
 @import 'layout/comments';
 
 
@@ -30,12 +30,15 @@
 @import 'components/buttons';
 @import 'components/hamburger';
 @import 'components/form';
+@import 'components/skills';
+@import 'components/map';
 
 //Ипортируем Персональные стили для страниц
 // @import "pages/**/*.scss";
 @import 'pages/index';
 @import 'pages/blog';
 @import 'pages/works';
+@import 'pages/about';
 
 //Ипортируем Персональные стили для тем
 // @import "themes/**/*.scss";

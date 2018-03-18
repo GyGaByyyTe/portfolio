@@ -1,0 +1,54 @@
+.skills {
+  &__item {
+    text-align: left;
+    margin-bottom: 1.9rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+  }
+  &__title {
+    color: $color_dark;
+    @include font-roboto(28px, 500);
+  }
+  &__exact-skill {
+    position: relative;
+    display: inline-block;
+    width: 111px;
+    height: 111px;
+    margin-right: 2rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+  }
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include font-roboto(13px, 500);
+    color: $color_green_hover;
+    text-align: center;
+  }
+  &__circle {
+    fill: none;
+    stroke-width: 1.2rem;
+  }
+  &__first-circle {
+    stroke: #dfdcd5;
+  }
+  &__second-circle {
+    stroke: $color_green_hover;
+    stroke-dasharray: 0.001 282.6;
+    transition: all 1s;
+  }
+
+  &__exact-skill:hover .circle-15 {
+    stroke-dasharray: 42.39 282.6;
+  }
+
+  &__sublist {
+    margin-top: 1rem;
+  }
+}
