@@ -24,9 +24,8 @@
   vertical-align: middle;
   overflow: hidden;  
   fill: #fff;
-  background-color: $color_dark;
 
-  @include hover-anim-one(background-color,$color_green_hover);
+  @include hover-anim-one(fill,$color_green_hover);
 
   &--vk {
     width: 31px;
