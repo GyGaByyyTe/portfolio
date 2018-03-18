@@ -1,0 +1,7 @@
+mixin socials(classNames, socialArray)
+    ul(class=`socials ${classNames}`)              
+        each item in socialArray
+            li.socials__item
+                a(href=`${item[2]}` target='_blank' class='socials__link')  
+                    svg(class=`socials__svg`)
+                        use(xlink:href=`${item[1]}`)    

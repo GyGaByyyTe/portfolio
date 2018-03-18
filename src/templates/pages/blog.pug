@@ -52,40 +52,5 @@ block content
 
 
 block footer
-    footer.footer
-        .footer__top
-            ul.footer__list
-                li.footer__item
-                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-                li.footer__item
-                    ul.menu
-                        - 
-                            var internalLinks = [
-                                ['Мои работы',  'works.html'],
-                                ['Обо мне',     'about.html'],
-                                ['Блог',        'blog.html'],
-                                ['Авторизация', 'index.html'],
-                            ]                   
-                        each item in internalLinks
-                            li.menu__item
-                                a(href=`${item[1]}` class='menu__link') #{item[0]}
-                    .footer__socials
-                        ul.socials.socials--footer
-                            - 
-                                var socialLinks = [
-                                    ['vk',  'assets/images/sprite.svg#vk',     'https://vk.com/gygabyyyte' ],
-                                    ['git', 'assets/images/sprite.svg#github', 'https://github.com/GyGaByyyTe' ],
-                                    ['in',  'assets/images/sprite.svg#in',     'https://vk.com/gygabyyyte' ]
-                                ]                
-                            each item in socialLinks
-                                li.socials__item
-                                    a(href=`${item[2]}` target='_blank' class='socials__link')  
-                                        svg(class=`socials__svg socials__svg--${item[0]}`)
-                                            use(xlink:href=`${item[1]}`)                                
-                li.footer__item
-                    .footer__cite
-                        p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-                        span — Martin Golding
-        .footer__bot
-            .copyright.copyright--footer
-                p © Андрей Лебедев | Cоздано с любовью в LoftSchool | 2018        
+    include ../common/footer.pug
+    +footer

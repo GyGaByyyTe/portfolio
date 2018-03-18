@@ -17,18 +17,15 @@ block content
                         .user__name Лебедев Андрей
                         .user__info Личный сайт разработчика
                 .index__socials
-                    ul.socials
-                        - 
-                            var socialLinks = [
-                                ['vk',  'assets/images/sprite.svg#vk',     'https://vk.com/gygabyyyte' ],
-                                ['git', 'assets/images/sprite.svg#github', 'https://github.com/GyGaByyyTe' ],
-                                ['in',  'assets/images/sprite.svg#in',     'https://vk.com/gygabyyyte' ]
-                            ]                
-                        each item in socialLinks
-                            li.socials__item
-                                a(href=`${item[2]}` target='_blank' class='socials__link')  
-                                    svg(class=`socials__svg socials__svg--${item[0]}`)
-                                        use(xlink:href=`${item[1]}`)
+                    - 
+                        var socialLinks = [
+                            ['vk',  'assets/images/sprite.svg#vk',     'https://vk.com/gygabyyyte' ],
+                            ['git', 'assets/images/sprite.svg#github', 'https://github.com/GyGaByyyTe' ],
+                            ['in',  'assets/images/sprite.svg#in',     'https://vk.com/gygabyyyte' ],
+                        ]                      
+                    include ../common/socials.pug
+                    +socials('',socialLinks) 
+
                 .index__pages
                     ul.pages
                         - 

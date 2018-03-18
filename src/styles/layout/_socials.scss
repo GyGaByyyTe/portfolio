@@ -22,21 +22,9 @@
 
 .socials__svg {
   vertical-align: middle;
-  overflow: hidden;  
+  overflow: hidden;
   fill: #fff;
-
-  @include hover-anim-one(fill,$color_green_hover);
-
-  &--vk {
-    width: 31px;
-    height: 17px;
-  }
-  &--git {
-    width: 26px;
-    height: 22px;
-  }
-  &--in {
-    width: 24px;
-    height: 22px;
-  }
+  width: 25px;
+  height: 25px;
+  @include hover-anim-one(fill, $color_green_hover);
 }

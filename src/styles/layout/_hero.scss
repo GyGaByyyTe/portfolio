@@ -1,6 +1,7 @@
 .hero {
   background-image: url('../images/backgrounds/back_index.jpg');
-  max-height: 440px;
+  min-height: 650px;
+  height: 100vh;
   color: $color_white;
 
   @include flex-prop;
