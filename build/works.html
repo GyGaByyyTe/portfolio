@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Мои работы</title>
+    <title>Личный сайт веб разработчика Андрея Лебедева | Работы</title>
     <meta content="" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -13,19 +13,151 @@
     <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <div class="undefined">
-      <h1>Мои работы</h1>
-      <div class="container">
-        <ul id="slides">
-          <li class="slide showing"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-        </ul>
-        <div class="buttons">
-          <button class="controls" id="previous">&lt;</button>
-          <button class="controls" id="next">&gt;</button>
+    <div class="wrapper">
+      <section class="section hero">
+        <div class="hero__top">
+          <div class="hero__top-left">
+                        <ul class="socials socials--align_left">             
+                          <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                              <svg class="socials__svg">
+                                <use xlink:href="assets/images/sprite.svg#vk">   </use>
+                              </svg></a></li>
+                          <li class="socials__item"><a class="socials__link" href="https://github.com/GyGaByyyTe" target="_blank"> 
+                              <svg class="socials__svg">
+                                <use xlink:href="assets/images/sprite.svg#github">   </use>
+                              </svg></a></li>
+                          <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                              <svg class="socials__svg">
+                                <use xlink:href="assets/images/sprite.svg#in">   </use>
+                              </svg></a></li>
+                        </ul>
+          </div>
+          <div class="hero__top-right">
+            <div class="hamburger">               <a class="hamburger__link" href="#">Меню
+                <svg class="hamburger__svg">
+                  <use xlink:href="assets/images/sprite.svg#hamburger"> </use>
+                </svg></a></div>
+          </div>
         </div>
-      </div>
+        <div class="hero__center">
+          <div class="user">
+            <div class="user__pic"><img class="user__pic-img" src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index"></div>
+            <div class="user__description">
+              <div class="user__name">Лебедев Андрей</div>
+              <div class="user__info">Личный сайт веб разработчика </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__button">
+          <svg class="hero__button-svg">
+            <use xlink:href="assets/images/sprite.svg#arrow_down">       </use>
+          </svg>
+        </div>
+      </section>
+      <section class="section works">  
+        <h2 class="section__header section__header--color_black works__header">Мои работы    </h2>
+        <div class="works__slider">
+          <div class="slider">
+            <div class="slider__description">
+              <h3 class="slider__title">Сайт школы онлайн Образования</h3>
+              <p class="slider__text">HTML , CSS, JAVASCRIPT</p><a class="slider__link button button--color_green" href="#">Посмотреть сайт</a>
+            </div>
+            <div class="slider__content">
+              <div class="slider__current"><img class="slider__current-img" src="./assets/images/userfiles/slider/slide_1_big.png" alt="slide_1_big"></div><a class="slider__button slider__button--prev"><img class="slider__button-img" src="./assets/images/userfiles/slider/slide_3_small.png" alt="slider_3_small">
+                <svg class="slider__svg">
+                  <use xlink:href="assets/images/sprite.svg#portf_arrow_down">                         </use>
+                </svg></a><a class="slider__button slider__button--next"><img class="slider__button-img" src="./assets/images/userfiles/slider/slide_2_small.png" alt="slider_2_small">
+                <svg class="slider__svg">
+                  <use xlink:href="assets/images/sprite.svg#portf_arrow_up">               </use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section about">   
+        <h2 class="section__header section__header--color_black about__header">Что обо мне говорят   </h2>
+        <div class="about__comments">
+          <ul class="comments">
+            <li class="comments__item"><img class="comments__item-img" src="./assets/images/userfiles/avatars/ava_comment_1.jpg" alt="comment_1">
+              <div class="comments__text">
+                <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+              </div>
+              <div class="comments__info">
+                <div class="comments__name"><span>Ковальчук Дмитрий</span></div>
+                <div class="comments__position"><span> — основатель Loftschool             </span></div>
+              </div>
+            </li>
+            <li class="comments__item"><img class="comments__item-img" src="./assets/images/userfiles/avatars/ava_comment_2.jpg" alt="comment_2">
+              <div class="comments__text">
+                <p>Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</p>
+              </div>
+              <div class="comments__info">
+                <div class="comments__name"><span>Сабанцев Владимир</span></div>
+                <div class="comments__position"><span>— преподаватель  </span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="about__contact">
+          <form class="about__form form">
+            <h3 class="form__title">Связаться со мной</h3>
+            <div class="form__elem">
+              <div class="form__row">
+                <input class="form__input" type="text" name="user-name" required>
+              </div>
+              <div class="form__row">
+                <input class="form__input" type="email" name="user-mail" required>
+              </div>
+              <div class="form__row">
+                <textarea class="form__block-area" cols="30" rows="4" name="user-comment">                  </textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+            <footer class="footer">
+              <div class="footer__top">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+                  </li>
+                  <li class="footer__item">
+                    <ul class="menu">
+                      <li class="menu__item"><a class="menu__link" href="works.html">Мои работы</a></li>
+                      <li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
+                      <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
+                      <li class="menu__item"><a class="menu__link" href="index.html">Авторизация</a></li>
+                    </ul>
+                    <div class="footer__socials">
+                                      <ul class="socials socials--align_left">             
+                                        <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                                            <svg class="socials__svg">
+                                              <use xlink:href="assets/images/sprite.svg#vk">   </use>
+                                            </svg></a></li>
+                                        <li class="socials__item"><a class="socials__link" href="https://github.com/GyGaByyyTe" target="_blank"> 
+                                            <svg class="socials__svg">
+                                              <use xlink:href="assets/images/sprite.svg#github">   </use>
+                                            </svg></a></li>
+                                        <li class="socials__item"><a class="socials__link" href="https://vk.com/gygabyyyte" target="_blank"> 
+                                            <svg class="socials__svg">
+                                              <use xlink:href="assets/images/sprite.svg#in">   </use>
+                                            </svg></a></li>
+                                      </ul>
+                    </div>
+                  </li>
+                  <li class="footer__item">
+                    <div class="footer__cite">
+                      <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p><span>— Martin Golding</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__bot">
+                <div class="copyright copyright--footer">
+                  <p>© Андрей Лебедев | Cоздано с любовью в LoftSchool | 2018       </p>
+                </div>
+              </div>
+            </footer>
     </div>
   </body>
 </html>

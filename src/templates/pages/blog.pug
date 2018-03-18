@@ -6,12 +6,29 @@ block variables
 
 block content
     section.section.hero
+        .hero__top
+            .hero__top-left
+                - 
+                    var socialLinks = [
+                        ['vk',  'assets/images/sprite.svg#vk',     'https://vk.com/gygabyyyte' ],
+                        ['git', 'assets/images/sprite.svg#github', 'https://github.com/GyGaByyyTe' ],
+                        ['in',  'assets/images/sprite.svg#in',     'https://vk.com/gygabyyyte' ],
+                    ]                      
+                include ../common/socials.pug
+                +socials('socials--align_left',socialLinks)  
+
+            .hero__top-right
+                .hamburger                
+                    a(href='#' class='hamburger__link') Меню
+                        svg(class='hamburger__svg')
+                            use(xlink:href='assets/images/sprite.svg#hamburger') 
+                                
         .hero__center
             .user
                 .user__pic
                     img(src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index" class="user__pic-img")
             .hero__description
-                h2.hero__header Блог
+                h2.section__header.hero__header Блог
                 .hero__info Статьи, которые я написал  
 
     section.section.blog

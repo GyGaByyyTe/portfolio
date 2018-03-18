@@ -1,8 +1,93 @@
 extends ../template
 
 block variables
-    - var title = 'Мои работы'
+    - var title = 'Личный сайт веб разработчика Андрея Лебедева | Работы'
+    - var wrapper = 'wrapper' 
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+    section.section.hero
+        .hero__top
+            .hero__top-left
+                - 
+                    var socialLinks = [
+                        ['vk',  'assets/images/sprite.svg#vk',     'https://vk.com/gygabyyyte' ],
+                        ['git', 'assets/images/sprite.svg#github', 'https://github.com/GyGaByyyTe' ],
+                        ['in',  'assets/images/sprite.svg#in',     'https://vk.com/gygabyyyte' ],
+                    ]                      
+                include ../common/socials.pug
+                +socials('socials--align_left',socialLinks)  
+
+            .hero__top-right
+                .hamburger                
+                    a(href='#' class='hamburger__link') Меню
+                        svg(class='hamburger__svg')
+                            use(xlink:href='assets/images/sprite.svg#hamburger') 
+
+        .hero__center
+            .user
+                .user__pic
+                    img(src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index" class="user__pic-img")
+                .user__description
+                    .user__name Лебедев Андрей
+                    .user__info Личный сайт веб разработчика 
+        .hero__button
+            svg(class='hero__button-svg')
+                use(xlink:href='assets/images/sprite.svg#arrow_down')        
+
+    section.section.works   
+        h2.section__header.section__header--color_black.works__header Мои работы    
+        .works__slider
+            .slider
+                .slider__description
+                    h3.slider__title Сайт школы онлайн Образования
+                    p.slider__text HTML , CSS, JAVASCRIPT
+                    a(href='#' class='slider__link button button--color_green') Посмотреть сайт
+                .slider__content
+                    .slider__current
+                        img(src="./assets/images/userfiles/slider/slide_1_big.png" alt="slide_1_big" class="slider__current-img")
+                    a.slider__button.slider__button--prev
+                        img(src="./assets/images/userfiles/slider/slide_3_small.png" alt="slider_3_small" class="slider__button-img")
+                        svg(class='slider__svg')
+                                use(xlink:href='assets/images/sprite.svg#portf_arrow_down')                          
+                    a.slider__button.slider__button--next
+                        img(src="./assets/images/userfiles/slider/slide_2_small.png" alt="slider_2_small" class="slider__button-img") 
+                        svg(class='slider__svg')
+                                use(xlink:href='assets/images/sprite.svg#portf_arrow_up')                
+    section.section.about    
+        h2.section__header.section__header--color_black.about__header Что обо мне говорят   
+        .about__comments
+            ul.comments
+                li.comments__item
+                    img(src="./assets/images/userfiles/avatars/ava_comment_1.jpg" alt="comment_1" class="comments__item-img")  
+                    .comments__text
+                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .comments__info
+                        .comments__name
+                            span Ковальчук Дмитрий
+                        .comments__position
+                            span  — основатель Loftschool             
+                li.comments__item
+                    img(src="./assets/images/userfiles/avatars/ava_comment_2.jpg" alt="comment_2" class="comments__item-img")  
+                    .comments__text
+                        p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                    .comments__info
+                        .comments__name
+                            span Сабанцев Владимир
+                        .comments__position
+                            span — преподаватель  
+        .about__contact
+            form.about__form.form
+                h3.form__title Связаться со мной
+                .form__elem
+                    .form__row
+                        input(type='text' name='user-name' class='form__input' required)
+                    .form__row
+                        input(type='email' name='user-mail' class='form__input' required)  
+                    .form__row
+                        textarea(cols='30' rows='4' name='user-comment' class='form__block-area')                   
+
+
+
+block footer
+    include ../common/footer.pug
+    +footer

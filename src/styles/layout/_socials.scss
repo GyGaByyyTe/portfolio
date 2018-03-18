@@ -1,7 +1,7 @@
 .socials {
   text-align: center;
 
-  &--footer {
+  &--align_left {
     text-align: left;
   }
 }
@@ -9,7 +9,7 @@
 .socials__item {
   font-size: 0;
   display: inline-block;
-  margin-right: 6%;
+  margin-right: 1.9rem;
 
   &:last-child {
     margin-right: 0;

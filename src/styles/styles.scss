@@ -16,16 +16,19 @@
 @import 'layout/footer';
 @import 'layout/article';
 @import 'layout/menu';
+@import 'layout/about';
 
 
 //Ипортируем Стили отдельных компонентов
 @import 'components/pages';
 @import 'components/slider';
 @import 'components/buttons';
+@import 'components/hamburger';
 
 //Ипортируем Персональные стили для страниц
 @import 'pages/index';
 @import 'pages/blog';
+@import 'pages/works';
 
 //Ипортируем Персональные стили для тем
 // @import 'themes/default';

@@ -1,0 +1,12 @@
+.hamburger {
+  text-align: right;
+}
+.hamburger__link {
+  display: inline-block;
+  font-size: 0;
+}
+.hamburger__svg {
+  fill: $color_white;
+  width: 40px;
+  height: 35px;
+}

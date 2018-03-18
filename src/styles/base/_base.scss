@@ -92,3 +92,31 @@ a {
 .section {
   @include section-prop;
 }
+
+.section__header {
+  position: relative;
+  @include font-sansus(63px, 400);
+
+  text-transform: uppercase;
+
+  padding-bottom: 8%;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 45%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);    
+    border-bottom: 3px solid $color_white;
+  }
+
+  &--color_black
+  {
+    color: $color_gray;
+    padding-bottom: 1rem;    
+    &:after { 
+      border-bottom: 3px solid $color_gray;
+    }    
+  }
+}

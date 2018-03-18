@@ -5,38 +5,44 @@
   color: $color_white;
 
   @include flex-prop;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: centerl;
 }
 
+.hero__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hero__top-left {
+  padding-top: 1.7rem;
+  padding-left: 2rem;
+  width: 50%;
+}
+.hero__top-right {
+  padding-top: 2rem;
+  padding-right: 1.8rem;
+  width: 50%;
+}
+
 .hero__center {
-    padding-top: 1.5%;
+  padding-bottom: 2.5rem;
 }
 
 .hero__description {
   text-align: center;
-  margin-top: 1rem;  
+  margin-top: 1rem;
 }
-.hero__header {
-  position: relative;
-  @include font-sansus(63px, 400);
-
-  text-transform: uppercase;
-
-  padding-bottom: 8%;
-
-  &:after {
-    content: ' ';
-    position: absolute;
-    width: 45%;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);    
-    border-bottom: 3px solid $color_white;
-  }
-}
-
 .hero__info {
-    margin-top: 15%;
-    @include font-roboto(16px,400);
+  margin-top: 15%;
+  @include font-roboto(16px, 400);
+}
+.hero__button {
+  margin-bottom: 4.3rem;
+}
+.hero__button-svg {
+  fill: $color_white;
+  width: 26px;
+  height: 16px;
 }
