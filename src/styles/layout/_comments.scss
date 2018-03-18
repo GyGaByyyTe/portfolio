@@ -1,0 +1,30 @@
+.comments {
+  @include flex-prop;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 67%;
+  margin: 0 auto;
+
+  &__item {
+    padding: 0 0.8rem;
+    width: 50%;
+    @include font-roboto(16px, 400);
+    font-style: italic;
+  }
+
+  &__text {
+    text-align: justify;
+    margin-top: 0.8rem;
+    line-height: 26px;
+  }
+  &__info {
+    margin-top: 1.2rem;
+
+    &-name {
+      @include font-roboto(16px, 700);
+      color: $color_green_hover;
+      margin-bottom: 0.4rem;
+    }
+  }
+}

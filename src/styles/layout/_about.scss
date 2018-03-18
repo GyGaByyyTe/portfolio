@@ -1,6 +1,35 @@
 .about {
-    height: 100%;
-}
-.about__header{
+  background-image: url('../images/backgrounds/back_about.png');
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+
+  &__header {
+    width: 40%;
+    margin-top: 3.3rem;
+    line-height: 5rem;
     display: inline-block;
+  }
+
+  &__comments {
+    padding-top: 1.7rem;
+  }
+
+  &__contacts {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    margin-top: 4.5rem;
+    margin-bottom: 4.2rem;
+  }
+  &__button-svg {
+    opacity: 0.6;
+    fill: $color_white;
+    width: 26px;
+    height: 16px;
+  }
 }

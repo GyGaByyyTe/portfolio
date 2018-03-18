@@ -62,30 +62,35 @@ block content
                     .comments__text
                         p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                     .comments__info
-                        .comments__name
+                        .comments__info-name
                             span Ковальчук Дмитрий
-                        .comments__position
+                        .comments__info-position
                             span  — основатель Loftschool             
                 li.comments__item
                     img(src="./assets/images/userfiles/avatars/ava_comment_2.jpg" alt="comment_2" class="comments__item-img")  
                     .comments__text
                         p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
                     .comments__info
-                        .comments__name
+                        .comments__info-name
                             span Сабанцев Владимир
-                        .comments__position
+                        .comments__info-position
                             span — преподаватель  
-        .about__contact
+        .about__contacts
             form.about__form.form
-                h3.form__title Связаться со мной
-                .form__elem
+                .form__container
+                    h3.form__title Связаться со мной
                     .form__row
                         input(type='text' name='user-name' class='form__input' required)
                     .form__row
                         input(type='email' name='user-mail' class='form__input' required)  
                     .form__row
-                        textarea(cols='30' rows='4' name='user-comment' class='form__block-area')                   
-
+                        textarea(cols='30' rows='4' name='user-comment' class='form__text-area')   
+                .form__buttons
+                    <button type="submit" class="form__button form__button--order">Отправить</button>                             
+                    <button type="reset" class="form__button form__button--clear">Очистить</button>
+            .about__button
+                svg(class='about__button-svg')
+                    use(xlink:href='assets/images/sprite.svg#portf_arrow_up')                     
 
 
 block footer

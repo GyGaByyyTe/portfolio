@@ -83,8 +83,8 @@
                 <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
               </div>
               <div class="comments__info">
-                <div class="comments__name"><span>Ковальчук Дмитрий</span></div>
-                <div class="comments__position"><span> — основатель Loftschool             </span></div>
+                <div class="comments__info-name"><span>Ковальчук Дмитрий</span></div>
+                <div class="comments__info-position"><span> — основатель Loftschool             </span></div>
               </div>
             </li>
             <li class="comments__item"><img class="comments__item-img" src="./assets/images/userfiles/avatars/ava_comment_2.jpg" alt="comment_2">
@@ -92,16 +92,16 @@
                 <p>Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</p>
               </div>
               <div class="comments__info">
-                <div class="comments__name"><span>Сабанцев Владимир</span></div>
-                <div class="comments__position"><span>— преподаватель  </span></div>
+                <div class="comments__info-name"><span>Сабанцев Владимир</span></div>
+                <div class="comments__info-position"><span>— преподаватель  </span></div>
               </div>
             </li>
           </ul>
         </div>
-        <div class="about__contact">
+        <div class="about__contacts">
           <form class="about__form form">
-            <h3 class="form__title">Связаться со мной</h3>
-            <div class="form__elem">
+            <div class="form__container">
+              <h3 class="form__title">Связаться со мной</h3>
               <div class="form__row">
                 <input class="form__input" type="text" name="user-name" required>
               </div>
@@ -109,10 +109,18 @@
                 <input class="form__input" type="email" name="user-mail" required>
               </div>
               <div class="form__row">
-                <textarea class="form__block-area" cols="30" rows="4" name="user-comment">                  </textarea>
+                <textarea class="form__text-area" cols="30" rows="4" name="user-comment">  </textarea>
               </div>
             </div>
+            <div class="form__buttons"><button type="submit" class="form__button form__button--order">Отправить</button>                             
+<button type="reset" class="form__button form__button--clear">Очистить</button>
+            </div>
           </form>
+          <div class="about__button">
+            <svg class="about__button-svg">
+              <use xlink:href="assets/images/sprite.svg#portf_arrow_up">                    </use>
+            </svg>
+          </div>
         </div>
       </section>
             <footer class="footer">
