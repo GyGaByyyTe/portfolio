@@ -24,6 +24,8 @@ block content
                             use(xlink:href='assets/images/sprite.svg#hamburger') 
 
         .hero__center
+            svg(class='transparent__svg-bg')
+                use(xlink:href='assets/images/sprite.svg#portfolio_header')         
             .user
                 .user__pic
                     img(src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index" class="user__pic-img")
@@ -35,8 +37,16 @@ block content
                 use(xlink:href='assets/images/sprite.svg#arrow_down')   
 
     section.section.about 
+        .section__overlay
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+                <polygon class = "section__overlay-left section__overlay-left--about" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+                <polygon class = "section__overlay-right section__overlay-right--about" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>       
         .about__left
-            h2.section__header.section__header--color_black.about__header Обо мне
+            .about__header
+                svg(class='transparent__svg-bg transparent__svg-bg--about_main')
+                    use(xlink:href='assets/images/sprite.svg#about_header')            
+                h2.section__header.section__header--color_black Обо мне
             img(src="./assets/images/userfiles/avatars/ava_about_1.png" alt="ava_about_1" class="about__img")
             .about__title Кто я
             .about__text

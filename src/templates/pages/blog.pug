@@ -23,15 +23,23 @@ block content
                         svg(class='hamburger__svg')
                             use(xlink:href='assets/images/sprite.svg#hamburger') 
                                 
-        .hero__center
+        .hero__center.hero__center--blog
             .user
                 .user__pic
                     img(src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index" class="user__pic-img")
             .hero__description
-                h2.section__header.hero__header Блог
+                .hero__header
+                    svg(class='transparent__svg-bg transparent__svg-bg--blog')
+                        use(xlink:href='assets/images/sprite.svg#blog_header')            
+                    h2.section__header Блог
                 .hero__info Статьи, которые я написал  
 
     section.section.blog
+        .section__overlay
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+                <polygon class = "section__overlay-left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+                <polygon class = "section__overlay-right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>    
         - 
             var articleList = [
                 ['Самое важное в SASS', 

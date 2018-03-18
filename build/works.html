@@ -39,7 +39,10 @@
                 </svg></a></div>
           </div>
         </div>
-        <div class="hero__center">
+        <div class="hero__center">       
+          <svg class="transparent__svg-bg">
+            <use xlink:href="assets/images/sprite.svg#portfolio_header"></use>
+          </svg>
           <div class="user">
             <div class="user__pic"><img class="user__pic-img" src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index"></div>
             <div class="user__description">
@@ -50,12 +53,22 @@
         </div>
         <div class="hero__button">
           <svg class="hero__button-svg">
-            <use xlink:href="assets/images/sprite.svg#arrow_down">       </use>
+            <use xlink:href="assets/images/sprite.svg#arrow_down">  </use>
           </svg>
         </div>
       </section>
-      <section class="section works">  
-        <h2 class="section__header section__header--color_black works__header">Мои работы    </h2>
+      <section class="section works">      
+        <div class="section__overlay"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+<polygon class = "section__overlay-left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+<polygon class = "section__overlay-right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+</svg>
+        </div>
+        <div class="works__header">
+          <svg class="transparent__svg-bg transparent__svg-bg--works">
+            <use xlink:href="assets/images/sprite.svg#works_header">            </use>
+          </svg>
+          <h2 class="section__header section__header--color_black">Мои работы    </h2>
+        </div>
         <div class="works__slider">
           <div class="slider">
             <div class="slider__description">
@@ -75,7 +88,12 @@
         </div>
       </section>
       <section class="section reviews">   
-        <h2 class="section__header section__header--color_black reviews__header">Что обо мне говорят   </h2>
+        <div class="reviews__header">
+          <svg class="transparent__svg-bg transparent__svg-bg--about">
+            <use xlink:href="assets/images/sprite.svg#about_header">          </use>
+          </svg>
+          <h2 class="section__header section__header--color_black">Что обо мне говорят   </h2>
+        </div>
         <div class="reviews__comments">
           <ul class="comments">
             <li class="comments__item"><img class="comments__item-img" src="./assets/images/userfiles/avatars/ava_comment_1.jpg" alt="comment_1">

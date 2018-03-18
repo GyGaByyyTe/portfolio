@@ -39,17 +39,27 @@
                 </svg></a></div>
           </div>
         </div>
-        <div class="hero__center">
+        <div class="hero__center hero__center--blog">
           <div class="user">
             <div class="user__pic"><img class="user__pic-img" src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index"></div>
           </div>
           <div class="hero__description">
-            <h2 class="section__header hero__header">Блог</h2>
+            <div class="hero__header">
+              <svg class="transparent__svg-bg transparent__svg-bg--blog">
+                <use xlink:href="assets/images/sprite.svg#blog_header">           </use>
+              </svg>
+              <h2 class="section__header">Блог</h2>
+            </div>
             <div class="hero__info">Статьи, которые я написал  </div>
           </div>
         </div>
       </section>
       <section class="section blog">
+        <div class="section__overlay"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+<polygon class = "section__overlay-left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+<polygon class = "section__overlay-right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+</svg>    
+        </div>
         <aside class="blog__aside">
           <ul class="blog__aside-list">              
             <li class="blog__aside-item"><a class="blog__aside-link" href="#">Самое важное в SASS</a></li>

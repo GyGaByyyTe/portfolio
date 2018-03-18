@@ -40,6 +40,9 @@
           </div>
         </div>
         <div class="hero__center">
+          <svg class="transparent__svg-bg">
+            <use xlink:href="assets/images/sprite.svg#portfolio_header">        </use>
+          </svg>
           <div class="user">
             <div class="user__pic"><img class="user__pic-img" src="./assets/images/userfiles/avatars/ava_index.jpg" alt="ava_index"></div>
             <div class="user__description">
@@ -55,8 +58,18 @@
         </div>
       </section>
       <section class="section about"> 
+        <div class="section__overlay"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+<polygon class = "section__overlay-left section__overlay-left--about" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+<polygon class = "section__overlay-right section__overlay-right--about" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+</svg>       
+        </div>
         <div class="about__left">
-          <h2 class="section__header section__header--color_black about__header">Обо мне</h2><img class="about__img" src="./assets/images/userfiles/avatars/ava_about_1.png" alt="ava_about_1">
+          <div class="about__header">
+            <svg class="transparent__svg-bg transparent__svg-bg--about_main">
+              <use xlink:href="assets/images/sprite.svg#about_header">           </use>
+            </svg>
+            <h2 class="section__header section__header--color_black">Обо мне</h2>
+          </div><img class="about__img" src="./assets/images/userfiles/avatars/ava_about_1.png" alt="ava_about_1">
           <div class="about__title">Кто я</div>
           <div class="about__text">
             <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>

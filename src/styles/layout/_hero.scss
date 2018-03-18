@@ -31,12 +31,21 @@
 }
 
 .hero__center {
+  width: 100%;
+  position: relative;
   padding-bottom: 2.5rem;
+
+  &--blog {
+    width: initial;
+  }
 }
 
 .hero__description {
   text-align: center;
   margin-top: 1rem;
+}
+.hero__header {
+  position: relative;
 }
 .hero__info {
   margin-top: 15%;
