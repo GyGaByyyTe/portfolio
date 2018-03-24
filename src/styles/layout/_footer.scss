@@ -13,6 +13,10 @@
   opacity: 0.85;
   @include font-roboto(16px, 300);
   color: $color_white;
+
+  @include wide {
+    padding-bottom: 2.16rem;
+  }
 }
 .footer__item {
   width: 33%;
@@ -20,6 +24,18 @@
   padding: 0 2.5%;
   text-align: justify;
   line-height: 1.45rem;
+
+  @include wide {
+    padding: 0 1rem;
+  }
+}
+
+.footer__text {
+
+  @include wide {
+    padding-right: 13rem;
+  }
+
 }
 .footer__socials {
   margin-top: 1rem;
@@ -29,9 +45,15 @@
   font-style: italic;
   @include font-roboto(16px, 300);
   line-height: 1.63rem;
+
+  @include wide {
+    padding-right: 5rem;
+  }
+
   span {
     font-weight: 700;
   }
+
 }
 .footer__bot {
   padding: 0.55rem;

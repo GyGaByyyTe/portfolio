@@ -1,5 +1,15 @@
 .menu {
     @include flex-prop;
+    justify-content: flex-start;
 }
 .menu__item {
+    margin-right: 1.1rem;
+
+    @include wide {
+        margin-right: 2.7rem;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
 }

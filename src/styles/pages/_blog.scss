@@ -6,12 +6,21 @@
   height: 100%;
   color: $color_dark;
   padding-bottom: 16.5%;
+
+  @include wide {
+    padding-bottom: 11rem;
+  }
 }
 
 .blog__aside {
   width: 30.5%;
   padding: 5.3% 4.6% 5% 2%;
   text-align: right;
+
+  @include wide {
+    width: 26.4%;
+    padding-top: 3.4rem;
+  }
 }
 .blog__aside-item {
   &--active {
@@ -45,6 +54,12 @@
 .blog__main {
   padding: 5% 6% 3% 3.5%;
   width: 66%;
+
+  @include wide {
+    width: 56%;
+    padding-top: 3.2rem;
+    padding-left: 2rem;
+  }
 }
 
 .blog__article {

@@ -40,12 +40,20 @@
   padding: 1.3rem;
   @include flex-prop;
   justify-content: flex-end;
+
+  @include wide {
+    padding-right: 6.3rem;
+  }
 }
 
 .index__center {
   position: relative;
   z-index: 10;
   margin-bottom: 4.5%;  
+
+  @include wide {
+    margin-bottom: 0;
+  }
 
   &:before {
     content: ' ';

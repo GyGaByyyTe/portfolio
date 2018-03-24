@@ -28,6 +28,10 @@
   padding-top: 2rem;
   padding-right: 1.8rem;
   width: 50%;
+
+  @include wide {
+    padding-right: 2rem;
+  }
 }
 
 .hero__center {

@@ -6,6 +6,10 @@
   overflow: hidden;
   height: 100%;
 
+  @include wide {
+    padding-bottom: 0;
+  }
+
   &__header {
     width: 30%;
     margin-top: 3.3rem;
