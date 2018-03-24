@@ -1,14 +1,27 @@
 .slider {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(750px, 100vh);
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: minmax(552px, 75vh) minmax(184px, 25vh);
 
+  @include tablets {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(500px, 50vh) minmax(275px, 25vh) minmax(
+        215px,
+        25vh
+      );
+  }
   &__description {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
     background-color: $color_light_gray;
     @include flex-prop;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include tablets {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
   }
   &__title {
     width: 70%;
@@ -16,11 +29,14 @@
     @include font-sansus(35px, 400);
     text-transform: uppercase;
     padding-bottom: 1.5rem;
-
     @include wide {
       width: 50%;
     }
-
+    @include tablets {
+      width: 100%;
+      font-size: 30px;
+      padding-bottom: 1rem;
+    }
     &:after {
       content: ' ';
       position: absolute;
@@ -29,29 +45,37 @@
       left: 50%;
       transform: translateX(-50%);
       border-bottom: 3px solid $color_dark;
+      @include tablets {
+        width: 12%;
+      }
     }
   }
-
   &__text {
     margin-top: 1.5rem;
     @include font-roboto(16px, 500);
     color: $color_green_hover;
     text-transform: uppercase;
+    @include tablets {
+      margin-top: 1rem;
+    }
   }
   &__link {
     margin-top: 4rem;
-  }
-  &__content {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70% 30%;
+    @include tablets {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
   }
   &__current {
     width: 100%;
-    grid-column: 1 / 3;
+    grid-column: 2 / 4;
     grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    @include tablets {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
   }
   &__preview {
     width: 80%;
@@ -64,9 +88,8 @@
     position: relative;
     width: 100%;
     height: 100%;
-
     &--prev {
-      grid-column: 1 / 2;
+      grid-column: 2 / 3;
       grid-row: 2 / 3;
       background-color: rgba(176, 183, 170, 0.7);
       &:hover {
@@ -74,9 +97,13 @@
           top: 60%;
         }
       }
+      @include tablets {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
     }
     &--next {
-      grid-column: 2 / 3;
+      grid-column: 3 / 4;
       grid-row: 2 / 3;
       background-color: rgba(147, 153, 141, 0.7);
       &:hover {
@@ -84,9 +111,12 @@
           top: 40%;
         }
       }
+      @include tablets {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
     }
   }
-
   &__svg {
     position: absolute;
     width: 43px;
@@ -95,7 +125,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     fill: $color_white;
-
     @include transition;
   }
 }

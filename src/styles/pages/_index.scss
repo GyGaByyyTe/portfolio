@@ -6,6 +6,10 @@
 
   color: $color_white;
 
+  @include phones {
+    min-height: 100vh;
+  }
+
   &:before {
     content: ' ';
     position: absolute;
@@ -44,6 +48,10 @@
   @include wide {
     padding-right: 6.3rem;
   }
+  @include phones {
+    justify-content: center;
+    padding: 0.7rem;
+  }
 }
 
 .index__center {
@@ -54,6 +62,13 @@
   @include wide {
     margin-bottom: 0;
   }
+  @include tablets {
+    margin-bottom: 4rem;
+  }
+  @include phones {
+    margin: 0;
+  }
+
 
   &:before {
     content: ' ';
@@ -71,13 +86,26 @@
 }
 .index__socials {
     margin-top: 8.5%;
+
+    @include phones {
+      margin-top: 2rem;
+    }
 }
 .index__pages {
     margin-top: 10%;
+
+    @include phones {
+      margin-top: 2.5rem;
+    }
 }
 
 .index__bot {
   position: relative;
   z-index: 10;
   padding: 2.5rem;
+
+  @include phones {
+    padding: 0;
+    padding-top: 1.5rem;
+  }
 }

@@ -7,6 +7,10 @@
     min-height: 1100px;
     padding-bottom: 11rem;
   }
+  @include tablets {
+    padding-bottom: 0;
+    min-height: 906px;
+  }
 
   &__contacts {
     display: flex;
@@ -26,6 +30,17 @@
     @include wide {
       margin-top: 2rem;
     }
+    @include tablets {
+      margin-top: 0rem;
+      margin-bottom: 16rem;
+    }
+    @include phones {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+    }
 
     &:before {
       content: ' ';
@@ -36,6 +51,10 @@
       background-color: #f4f5f0;
       opacity: 0.85;
       border-radius: 0.4rem;
+
+      @include tablets {
+        height: 95%;
+      }
     }
   }
   &__title {
@@ -45,6 +64,14 @@
     @include font-sansus(35px, 400);
     text-transform: uppercase;
     padding-bottom: 1.5rem;
+
+    @include tablets {
+      padding: 1.5rem 6rem 1rem 6rem;
+      margin-bottom: 1rem;
+    }
+    @include phones {
+      padding: 0.5rem 0;
+    }
 
     &:after {
       content: ' ';
@@ -60,11 +87,18 @@
     position: relative;
     text-align: left;
     padding-left: 10%;
+    @include tablets {
+      padding-left: 1rem;
+    }
   }
   &__item {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+
+    @include tablets {
+      margin-bottom: 1.5rem;
+    }
 
     &:last-child {
       margin-bottom: 0;

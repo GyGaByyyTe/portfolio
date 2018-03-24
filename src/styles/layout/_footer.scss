@@ -17,6 +17,13 @@
   @include wide {
     padding-bottom: 2.16rem;
   }
+  @include tablets {
+    flex-wrap: wrap;
+  }
+  @include phones {
+    padding-top: 1rem;    
+    flex-direction: column;
+  }
 }
 .footer__item {
   width: 33%;
@@ -28,14 +35,34 @@
   @include wide {
     padding: 0 1rem;
   }
+  @include tablets {
+    width: 50%;
+
+    &:last-child {
+      width: 100%;
+      margin-top: 3rem;
+    }
+  }
+  @include phones {
+    width: 100%;
+    padding: 0 0 0.8rem 0;
+  }
 }
 
 .footer__text {
-
   @include wide {
     padding-right: 13rem;
   }
-
+  @include tablets {
+    font-size: rem(14px);
+  }
+  @include phones {
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;    
+    font-size: rem(14px);
+    font-weight: 300;
+  }  
 }
 .footer__socials {
   margin-top: 1rem;
@@ -49,11 +76,19 @@
   @include wide {
     padding-right: 5rem;
   }
+  @include tablets {
+    font-size: rem(14px);
+  }
+  @include phones {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: rem(14px);
+  }
 
   span {
     font-weight: 700;
   }
-
 }
 .footer__bot {
   padding: 0.55rem;

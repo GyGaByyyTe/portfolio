@@ -7,6 +7,10 @@
 
   &--index {
     font-size: rem(28px);
+
+    @include phones {
+      font-size: 21px;
+    }
   }
 }
 .user__info {

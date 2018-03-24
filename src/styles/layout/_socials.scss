@@ -3,6 +3,10 @@
 
   &--align_left {
     text-align: left;
+
+    @include phones {
+      text-align: center;
+    }
   }
 }
 

@@ -1,15 +1,24 @@
 .menu {
-    @include flex-prop;
+  @include flex-prop;
+  justify-content: space-between;
+
+  @include wide {
     justify-content: flex-start;
+  }
 }
 .menu__item {
-    margin-right: 1.1rem;
+  @include wide {
+    margin-right: 2.7rem;
+  }
+  @include tablets {
+    font-size: rem(14px);
+    margin-right: 0;
+  }
+  @include phones {
+    font-size: rem(14px);
+  }
 
-    @include wide {
-        margin-right: 2.7rem;
-    }
-
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 }

@@ -5,10 +5,13 @@
   overflow: visible;
   height: 100%;
   color: $color_dark;
-  padding-bottom: 16.5%;
+  padding-bottom: 14rem;
 
   @include wide {
     padding-bottom: 11rem;
+  }
+  @include tablets {
+    padding-bottom: 16rem;
   }
 }
 
@@ -20,6 +23,10 @@
   @include wide {
     width: 26.4%;
     padding-top: 3.4rem;
+  }
+  @include tablets {
+    position: absolute;
+    left: -35%;
   }
 }
 .blog__aside-item {
@@ -60,12 +67,22 @@
     padding-top: 3.2rem;
     padding-left: 2rem;
   }
+  @include tablets {
+    width: 100%;
+    padding: 2.8rem 1rem 2.8rem 1.2rem;
+  }
 }
 
 .blog__article {
   margin-top: 4rem;
   padding-bottom: 4.375rem;
-  border-bottom: 5px solid rgba($color_gray, 0.07);    
+  border-bottom: 5px solid rgba($color_gray, 0.07);   
+  
+  @include tablets {
+    margin-top: 3rem;
+    padding-bottom: 3rem;    
+  }
+
   &:first-child {
     margin-top: 0;
   }

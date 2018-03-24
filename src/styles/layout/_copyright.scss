@@ -1,6 +1,14 @@
 .copyright {
   @include font-roboto(16px, 400);
 
+  @include phones {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    width: 75%;
+    margin: 0 auto;
+  }
+
   &--footer {
     @include font-roboto(16px, 300);
     color: $color_white;

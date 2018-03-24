@@ -92,13 +92,13 @@ a {
   fill: $color_white;
   position: absolute;
   fill-opacity: 0.1;
-  left: 0;    
+  left: 0;
 
   &--works {
     fill: $color_green;
     width: 200%;
     height: 200%;
-    transform: translate(-20%,-40%);
+    transform: translate(-20%, -40%);
   }
   &--blog {
     fill: $color_white;
@@ -113,12 +113,12 @@ a {
     transform: translate(-25%, -15%);
 
     &_main {
-      fill: $color_green;     
+      fill: $color_green;
       width: 150%;
       height: 150%;
       transform: translate(-12%, -35%);
     }
-  }  
+  }
 }
 .section {
   @include section-prop;
@@ -141,6 +141,10 @@ a {
     fill: $color_white;
     &--about {
       fill: $color_dark_white;
+
+      @include tablets {
+        fill: $color_light_gray;
+      }
     }
   }
 }
@@ -166,6 +170,14 @@ a {
   &--color_black {
     color: $color_gray;
     padding-bottom: 1rem;
+
+    @include tablets {
+      font-size: rem(49px);
+    }
+    @include phones {
+      font-size: 35px;
+    }
+
     &:after {
       border-bottom: 3px solid $color_gray;
     }

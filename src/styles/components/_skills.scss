@@ -3,9 +3,12 @@
     text-align: left;
     margin-bottom: 1.9rem;
 
-    // @include wide {
-    //   margin-right: 2rem;
-    // }
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2.3rem;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -14,6 +17,14 @@
   &__title {
     color: $color_dark;
     @include font-roboto(28px, 500);
+
+    @include tablets {
+      font-size: rem(21px);
+    }
+    @include phones {
+      font-size: rem(21px);
+      text-align: center;
+    }
   }
   &__exact-skill {
     position: relative;
@@ -25,11 +36,15 @@
     @include wide {
       width: 120px;
       height: 120px;
-      margin-right: 2.2rem;      
+      margin-right: 2.2rem;
     }
-
+    @include phones {
+      margin: 0;
+    }
     &:last-child {
       margin-right: 0;
+
+
     }
   }
   &__name {
@@ -60,5 +75,11 @@
 
   &__sublist {
     margin-top: 1rem;
+
+    @include phones {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
   }
 }
