@@ -25,6 +25,7 @@
     }
     @include tablets {
       padding-top: 2rem;
+      width: 100%;
     }
     @include phones {
       width: 100%;
