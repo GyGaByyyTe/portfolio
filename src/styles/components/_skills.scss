@@ -21,6 +21,9 @@
       align-items: center;
       margin-bottom: 2.3rem;
     }
+    @include phones {
+      position: relative;
+    }
 
     &:last-child {
       margin-bottom: 0;
