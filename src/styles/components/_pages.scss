@@ -1,5 +1,7 @@
 .pages {
   font-size: 0;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .pages__item {
   position: relative;
@@ -37,7 +39,7 @@
   padding: 0.75rem 2rem;
   background-color: $color_green;
 
-  @include hover-anim-one(background-color,$color_green_hover);
+  @include hover-anim-one(background-color, $color_green_hover);
 
   @include tablets {
     padding: 0.75rem 1.7rem;
