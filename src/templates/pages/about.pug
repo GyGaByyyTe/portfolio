@@ -67,7 +67,7 @@ block content
                 .about__text
                     p Я веб разработчик из Пензы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                     p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        .about__right
+        .about__right#skills
             .about__title.about__title--right Чем я могу быть вам полезен
             .about__text.about__text--right
                 p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку:
@@ -76,15 +76,15 @@ block content
                     var skills = [
                         {
                             skillsType: 'Frontend',
-                            skillsList: ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                            skillsList: [['HTML5',65], ['CSS3',55], ['JavaScript & jQuery',35]]
                         },
                         {
                             skillsType: 'Backend',
-                            skillsList: ['PHP', 'mySQL', 'Node.js& npm', 'Mongo.db']
+                            skillsList: [['PHP',10], ['mySQL',12], ['Node.js& npm',5], ['Mongo.db',5]]
                         },
                         {
                             skillsType: 'WorkFlow',
-                            skillsList: ['Git', 'Gulp', 'Bower']
+                            skillsList: [['Git',30], ['Gulp',28], ['Bower',5]]
                         },                        
                     ]
                 ul.skills
@@ -94,11 +94,11 @@ block content
                             ul.skills__sublist
                                 each skill in item.skillsList
                                     li.skills__exact-skill
-                                        .skills__name= skill
-                                        <svg class="skills__circle" viewBox='0 0 110 110'>
-                                            <circle r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle"/> 
-                                            <circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="skills__second-circle circle-15"/> 
-                                        </svg>    
+                                        .skills__name= skill[0]
+                                        svg(class="skills__circle" viewBox='0 0 110 110')
+                                            circle(r="45" cx="50%" cy="50%" fill="none" class="skills__first-circle")
+                                            circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="skills__second-circle" data-percent=`${skill[1]}`)
+                                        //- </svg>    
 
     section.section.map
         .map__contacts
