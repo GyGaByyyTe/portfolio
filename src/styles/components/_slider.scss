@@ -10,6 +10,13 @@
         25vh
       );
   }
+  @include phones {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(260px, 50vh) minmax(220px, 35vh) minmax(
+        100px,
+        15vh
+      );
+  }  
   &__description {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
@@ -22,6 +29,10 @@
       grid-column: 1 / 3;
       grid-row: 2 / 3;
     }
+    @include phones {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }    
   }
   &__title {
     width: 70%;
@@ -37,6 +48,12 @@
       font-size: 30px;
       padding-bottom: 1rem;
     }
+    @include phones {
+      width: 100%;
+      font-size: 30px;
+      padding-bottom: 1rem;
+      font-size: rem(21px);
+    }    
     &:after {
       content: ' ';
       position: absolute;
@@ -48,6 +65,9 @@
       @include tablets {
         width: 12%;
       }
+      @include phones {
+        width: 12%;
+      }      
     }
   }
   &__text {
@@ -58,6 +78,10 @@
     @include tablets {
       margin-top: 1rem;
     }
+    @include phones {
+      margin-top: 1rem;
+      font-size: rem(14px);      
+    }    
   }
   &__link {
     margin-top: 4rem;
@@ -65,6 +89,10 @@
       margin-top: 2rem;
       margin-bottom: 1rem;
     }
+    @include phones {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }    
   }
   &__current {
     width: 100%;
@@ -75,7 +103,13 @@
     @include tablets {
       grid-column: 1 / 3;
       grid-row: 1 / 2;
+      background-color: #e1e4d7;
     }
+    @include phones {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      background-color: #e1e4d7;
+    }    
   }
   &__preview {
     width: 80%;
@@ -101,6 +135,10 @@
         grid-column: 1 / 2;
         grid-row: 3 / 4;
       }
+      @include phones {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }      
     }
     &--next {
       grid-column: 3 / 4;
@@ -115,6 +153,10 @@
         grid-column: 2 / 3;
         grid-row: 3 / 4;
       }
+      @include phones {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }      
     }
   }
   &__svg {

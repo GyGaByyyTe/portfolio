@@ -1,4 +1,16 @@
 .skills {
+  position: relative;
+  @include phones {
+    &:before {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      background-color: #f4f5f0;
+    }
+  }
+
   &__item {
     text-align: left;
     margin-bottom: 1.9rem;
@@ -43,8 +55,6 @@
     }
     &:last-child {
       margin-right: 0;
-
-
     }
   }
   &__name {

@@ -13,6 +13,9 @@
   @include tablets {
     padding-bottom: 16rem;
   }
+  @include phones {
+    padding-bottom: 22rem;
+  }
 }
 
 .blog__aside {
@@ -28,6 +31,10 @@
     position: absolute;
     left: -35%;
   }
+  @include phones {
+    position: absolute;
+    left: -45%;
+  }  
 }
 .blog__aside-item {
   &--active {
@@ -71,6 +78,10 @@
     width: 100%;
     padding: 2.8rem 1rem 2.8rem 1.2rem;
   }
+  @include phones {
+    width: 100%;
+    padding: 2.8rem 1rem 2.8rem 1.2rem;
+  }  
 }
 
 .blog__article {
@@ -82,6 +93,10 @@
     margin-top: 3rem;
     padding-bottom: 3rem;    
   }
+  @include phones {
+    margin-top: 2rem;
+    padding-bottom: 1rem;  
+  }  
 
   &:first-child {
     margin-top: 0;

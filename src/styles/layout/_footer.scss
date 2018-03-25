@@ -80,6 +80,7 @@
     font-size: rem(14px);
   }
   @include phones {
+    padding: 0 0.6rem;
     text-align: center;
     width: 100%;
     margin: 0 auto;

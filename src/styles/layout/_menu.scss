@@ -5,6 +5,9 @@
   @include wide {
     justify-content: flex-start;
   }
+  @include phones {
+    padding: 0 1rem;
+  }
 }
 .menu__item {
   @include wide {

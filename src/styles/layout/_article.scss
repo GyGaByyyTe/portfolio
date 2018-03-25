@@ -4,6 +4,9 @@
   @include tablets {
     font-size: rem(30px);
   }
+  @include phones {
+    font-size: rem(21px);
+  }
 }
 .article__date {
   margin-top: 0.8rem;
@@ -17,6 +20,11 @@
     margin-top: 0.5rem;
     margin-bottom: 0;
   }
+  @include phones {
+    font-size: rem(14px);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }  
 }
 .article__content {
   @include font-roboto(16px, 400);
@@ -27,6 +35,10 @@
     font-size: 14px;
     line-height: 1.45rem;   
   }
+  @include phones {
+    font-size: 14px;
+    line-height: 1.45rem;   
+  }
 
   p {
     margin-bottom: 0.6rem;
@@ -34,5 +46,8 @@
     @include tablets {
       margin-bottom: 1rem;
     }
+    @include phones {
+      margin-bottom: 1rem;
+    }    
   }
 }

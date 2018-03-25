@@ -8,13 +8,20 @@
       text-align: center;
     }
   }
+  &--header {
+    @include phones {
+      text-align: left;
+    }
+  }
 }
 
 .socials__item {
   font-size: 0;
   display: inline-block;
   margin-right: 1.9rem;
-
+  @include phones {
+    margin-right: 5vw;
+  }
   &:last-child {
     margin-right: 0;
   }

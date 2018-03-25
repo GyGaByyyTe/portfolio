@@ -55,6 +55,9 @@
       @include tablets {
         height: 95%;
       }
+      @include phones {
+        background-color: #fcfcfc;
+      }
     }
   }
   &__title {

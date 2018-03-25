@@ -1,14 +1,18 @@
 .works {
-    text-align: center;
-    height: 100%;
+  text-align: center;
+  height: 100%;
 }
-.works__header{
-    margin-top: 3.3rem;
-    line-height: 5rem;
-    display: inline-block;
-    position: relative;
+.works__header {
+  margin-top: 3.3rem;
+  line-height: 5rem;
+  display: inline-block;
+  position: relative;
 }
 .works__slider {
-    margin-top: 2rem;
-    min-height: 750px;    
+  margin-top: 2rem;
+  min-height: 750px;
+
+  @include phones {
+    min-height: 568px;
+  }
 }

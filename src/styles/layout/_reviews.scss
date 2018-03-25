@@ -13,6 +13,11 @@
     padding-bottom: 0;
     min-height: 1306px;
   }
+  @include phones {
+    padding-bottom: 30rem;
+    min-height: 1306px;
+    background-position: 29%, 0;    
+  }  
 
   &__header {
     width: 30%;
@@ -26,6 +31,11 @@
       margin-top: 2.5rem;
       line-height: 3.3rem;
     }
+    @include phones {
+      width: 65%;
+      margin-top: 2.5rem;
+      line-height: 3.3rem;
+    }    
   }
 
   &__comments {
@@ -41,6 +51,10 @@
     @include tablets {
       margin-top: 3rem;
     }
+    @include phones {
+      margin: 3rem auto 0;
+      width: 95%;
+    }    
   }
   &__button {
     margin-top: 4.5rem;
@@ -48,6 +62,9 @@
     @include tablets {
       display: none;
     }
+    @include phones {
+      display: none;
+    }    
   }
   &__button-svg {
     opacity: 0.6;
