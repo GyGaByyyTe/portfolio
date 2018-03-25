@@ -67,17 +67,18 @@
 <polygon class = "section__overlay-right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
 </svg>    
         </div>
-        <aside class="blog__aside">
-          <ul class="blog__aside-list">              
-            <li class="blog__aside-item"><a class="blog__aside-link" href="#">Самое важное в SASS</a></li>
-            <li class="blog__aside-item"><a class="blog__aside-link" href="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
-            <li class="blog__aside-item"><a class="blog__aside-link" href="#">Самый необходимый набор Gulp плагинов</a></li>
-            <li class="blog__aside-item"><a class="blog__aside-link" href="#">Почему я выбрал Jade</a></li>
+        <aside class="blog__aside" id="blog__aside">
+          <div class="blog__dummy"></div>
+          <ul class="blog__aside-list" id="blog__aside-list">              
+            <li class="blog__aside-item" id="0"><a class="blog__aside-link" href="#a0">Самое важное в SASS</a></li>
+            <li class="blog__aside-item" id="1"><a class="blog__aside-link" href="#a1">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+            <li class="blog__aside-item" id="2"><a class="blog__aside-link" href="#a2">Самый необходимый набор Gulp плагинов</a></li>
+            <li class="blog__aside-item" id="3"><a class="blog__aside-link" href="#a3">Почему я выбрал Jade</a></li>
           </ul>
         </aside>
         <main class="blog__main">
           <ul class="blog_article-list">
-            <li class="blog__article">
+            <li class="blog__article" data-idtitle="0"><a id="a0"></a>
               <div class="article">
                 <div class="article__header">Самое важное в SASS</div>
                 <div class="article__date">22 ноября 2016</div>
@@ -87,7 +88,7 @@
                 </div>
               </div>
             </li>
-            <li class="blog__article">
+            <li class="blog__article" data-idtitle="1"><a id="a1"></a>
               <div class="article">
                 <div class="article__header">Приёмы в вёрстке, без которых не обходится ни один сайт</div>
                 <div class="article__date">13 ноября 2016</div>
@@ -97,7 +98,7 @@
                 </div>
               </div>
             </li>
-            <li class="blog__article">
+            <li class="blog__article" data-idtitle="2"><a id="a2"></a>
               <div class="article">
                 <div class="article__header">Самый необходимый набор Gulp плагинов</div>
                 <div class="article__date">3 ноября 2018</div>
@@ -107,7 +108,7 @@
                 </div>
               </div>
             </li>
-            <li class="blog__article">
+            <li class="blog__article" data-idtitle="3"><a id="a3"></a>
               <div class="article">
                 <div class="article__header">Почему я выбрал Jade</div>
                 <div class="article__date">5 марта 2018</div>

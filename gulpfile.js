@@ -89,7 +89,7 @@ function clean() {
 // JSLint Task
 function lint() {
   return gulp
-    .src(paths.scripts.src)
+    .src([paths.scripts.src, '!src/scripts/water.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 }

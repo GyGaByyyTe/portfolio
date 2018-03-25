@@ -69,15 +69,17 @@ block content
                     ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minima quas suscipit voluptate ipsam! Fugiat, quaerat nam. Modi sapiente dolores obcaecati iusto eum ipsa? Quibusdam ipsam minus veniam natus quam ullam repudiandae consequatur.',
                         'Quisquam accusantium aperiam, sunt sint laudantium sed dignissimos facere aliquid quia labore dicta temporibus est? Voluptas, labore.'] ]
             ]      
-        aside.blog__aside
-            ul.blog__aside-list               
-                each item in articleList
-                    li.blog__aside-item
-                        a(href='#' class='blog__aside-link')= item[0]  
+        aside.blog__aside#blog__aside
+            .blog__dummy
+            ul.blog__aside-list#blog__aside-list               
+                each item, index in articleList
+                    li(id=`${index}`).blog__aside-item
+                        a(href=`#a${index}` class='blog__aside-link')= item[0]  
         main.blog__main
             ul.blog_article-list
                 - for (var i=0; i<4; i++)           
-                    li.blog__article
+                    li.blog__article(data-idtitle=`${i}`)
+                        a(id=`a${i}`)
                         .article
                             .article__header= articleList[i][0]
                             .article__date= articleList[i][1]               
