@@ -1,5 +1,7 @@
 var $ = require('jquery');
 
+require('./common/flipper');
+
 const activeArticleLink = document.querySelector('.blog__aside-item');
 if (activeArticleLink ) {
   activeArticleLink.setAttribute(

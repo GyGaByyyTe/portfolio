@@ -9,8 +9,8 @@ block content
         canvas.Background-canvas
     section.section.index
         .index__top
-            a.button.button--login Авторизоваться
-        .index__center
+            a.button.button--login#button-login Авторизоваться
+        .index__center#flipper
             .index__card
                 .index__user.user
                     .user__pic
@@ -39,6 +39,34 @@ block content
                         each item in internalLinks
                             li.pages__item
                                 a(href=`${item[1]}` class='pages__link') #{item[0]}
+            .index__auth                            
+                form.index__form.form.form--index
+                    .form__container                
+                        h3.form__title Авторизуйтесь
+                        .form__row
+                            input(type='text' name='user-login' class='form__input' required)
+                        .form__row
+                            input(type='password' name='user-pass' class='form__input' required)  
+                        .form__row
+                            label.form__custom-checkbox
+                                input(class="form__custom-checkbox-real" type="checkbox" name="dont-disturb")
+                                span.form__checkbox-custom
+                                span.form__block-title Я человек                     
+                        .form__row          
+                            label.form__label Вы точно не робот?                                         
+                    .form__custom-radio
+                        label.form__custom-radiobutton
+                            input(class="form__custom-radio-real" type="radio" name="is-human" value="yes")
+                            span.form__radio-custom
+                            span.form__block-title Да
+                        label.form__custom-radiobutton
+                            input(class="form__custom-radio-real" type="radio" name="is-human" value="nocash")
+                            span.form__radio-custom
+                            span.form__block-title Не уверен
+
+                    .form__buttons
+                        <button type="reset" class="form__button form__button--home">На главную</button>                             
+                        <button type="reset" class="form__button form__button--login">Войти</button>                        
         .index__bot
             .copyright
                 p © Андрей Лебедев | Cоздано с любовью в LoftSchool | 2018
