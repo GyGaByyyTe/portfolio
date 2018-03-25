@@ -1,5 +1,8 @@
 .skills {
   position: relative;
+  @include tablets {
+    padding: 0 4rem;
+  }
   @include phones {
     &:before {
       content: ' ';
@@ -41,6 +44,21 @@
       text-align: center;
     }
   }
+  &__sublist {
+    margin-top: 1rem;
+
+    @include tablets {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    @include phones {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
   &__exact-skill {
     position: relative;
     display: inline-block;
@@ -52,6 +70,9 @@
       width: 120px;
       height: 120px;
       margin-right: 2.2rem;
+    }
+    @include tablets {
+      margin: 0;
     }
     @include phones {
       margin: 0;
@@ -84,15 +105,5 @@
 
   &__exact-skill:hover .circle-15 {
     stroke-dasharray: 42.39 282.6;
-  }
-
-  &__sublist {
-    margin-top: 1rem;
-
-    @include phones {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
   }
 }
