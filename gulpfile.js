@@ -175,6 +175,10 @@ function spritesvg() {
   );
 }
 
+// просто переносим WebGL
+function water() {
+  return gulp.src('src/scripts/water.js').pipe(gulp.dest(paths.scripts.dest));
+}
 // просто переносим картинки
 function images() {
   return gulp.src(paths.images.src).pipe(gulp.dest(paths.images.dest));
@@ -189,6 +193,7 @@ exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.water = water;
 exports.spritesvg = spritesvg;
 exports.scripts = scriptsDev;
 
@@ -196,7 +201,7 @@ gulp.task(
   'default',
   gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, spritesvg, scriptsDev, fonts),
+    gulp.parallel(styles, templates, images, water, spritesvg, scriptsDev, fonts),
     gulp.parallel(watch, server)
   )
 );
@@ -205,7 +210,7 @@ gulp.task(
   'dev',
   gulp.series(
     clean,
-    gulp.parallel(fonts, styles, templates, images, spritesvg, scriptsDev)
+    gulp.parallel(fonts, styles, templates, images, water, spritesvg, scriptsDev)
   )
 );
 
@@ -213,7 +218,7 @@ gulp.task(
   'prod',
   gulp.series(
     clean,
-    gulp.parallel(fonts, styles, templates, images, spritesvg, scriptsProd)
+    gulp.parallel(fonts, styles, templates, images, water, spritesvg, scriptsProd)
   )
 );
 
