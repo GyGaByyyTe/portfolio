@@ -16,12 +16,22 @@ block content
                     ]                      
                 include ../common/socials.pug
                 +socials('socials--align_left socials--header',socialLinks)  
+            .hero__top-mid
+                - 
+                    var navLinks = [
+                        ['Мои работы',  'works.html'],
+                        ['Обо мне',     'about.html'],
+                        ['Блог',        'blog.html'],
+                        ['Авторизация', 'index.html']                    
+                    ]     
+                include ../common/navigation.pug
+                +navigation(navLinks)   
 
             .hero__top-right
                 .hamburger                
                     a(href='#' class='hamburger__link') Меню
-                        svg(class='hamburger__svg')
-                            use(xlink:href='assets/images/sprite.svg#hamburger') 
+                        //- svg(class='hamburger__svg')
+                        //-     use(xlink:href='assets/images/sprite.svg#hamburger') 
                                 
         .hero__center.hero__center--blog
             .user

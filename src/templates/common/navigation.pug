@@ -1,0 +1,6 @@
+mixin navigation(navLinks)
+    nav.navigation#nav
+        ul.navigation__list              
+            each item in navLinks
+                li.navigation__item
+                    a(href=`${item[1]}` class='navigation__link') #{item[0]} 
