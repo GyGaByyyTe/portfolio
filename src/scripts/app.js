@@ -3,6 +3,7 @@ var $ = require('jquery');
 require('./common/flipper');
 require('./common/blog');
 require('./common/skills');
+const googleMap = require('./common/map');
 
 // menu overlay
 var sliderOverlay = $('#nav');
