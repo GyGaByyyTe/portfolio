@@ -31,8 +31,7 @@ block content
             .hero__top-right
                 .hamburger                
                     a(href='#' class='hamburger__link') Меню
-                        //- svg(class='hamburger__svg')
-                        //-     use(xlink:href='assets/images/sprite.svg#hamburger') 
+                        .hamburger__line
 
         .hero__center        
             svg(class='transparent__svg-bg')
@@ -70,11 +69,11 @@ block content
                 a.slider__button.slider__button--prev
                     img(src="./assets/images/userfiles/slider/slide_3_small.png" alt="slider_3_small" class="slider__button-img")
                     svg(class='slider__svg')
-                            use(xlink:href='assets/images/sprite.svg#portf_arrow_down')                          
+                        use(xlink:href='assets/images/sprite.svg#portf_arrow_down')                          
                 a.slider__button.slider__button--next
                     img(src="./assets/images/userfiles/slider/slide_2_small.png" alt="slider_2_small" class="slider__button-img") 
                     svg(class='slider__svg')
-                            use(xlink:href='assets/images/sprite.svg#portf_arrow_up')                
+                        use(xlink:href='assets/images/sprite.svg#portf_arrow_up')                
     section.section.reviews    
         .reviews__header
             svg(class='transparent__svg-bg transparent__svg-bg--about')

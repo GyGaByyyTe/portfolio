@@ -6,6 +6,9 @@ $(document).ready(function() {
   const $articlesList = $('#blog__aside-list'); // ul со списком статей слева
   const $articleTitles = $('#blog__aside'); // aside
   const $articlesWidth = $('.blog__dummy'); // блок для получения ширины списка
+  const $blogMain = $('.blog__main');
+  let isSidebarOpen = false;
+  // document.documentElement.clientWidth
   let activeArticleId = null;
 
   function getCoords(elem) {
@@ -44,57 +47,109 @@ $(document).ready(function() {
   }
 
   function setArticleChords() {
-    // в elemChords получаем объект с координатами aside
-    const elemChords = getCoords($articleTitles[0]);
+    // в elemChords получаем объект с координатами blockMain
+    const elemChords = getCoords($blogMain[0]);
 
     if (WIN.pageYOffset >= elemChords.top - 30) {
-      const listCoords = getCoords($articlesList[0]);
+      if (document.documentElement.clientWidth < 752) {
+        const listCoords = getCoords($articleTitles[0]);
+        $articleTitles.css({
+          position: 'fixed',
+          top: 0
+          // left: listCoords.left + 'px'
+        });
+        $articlesList.css({
+          position: 'static'
+        });
+      } else {
+        const listCoords = getCoords($articlesList[0]);
+        $articlesList.css({
+          position: 'fixed',
+          top: 30 + 'px',
+          left: listCoords.left + 'px'
+        });
+        $articleTitles.css({
+          position: 'static'
+        });
+      }
+    } else {
+      if (document.documentElement.clientWidth < 752) {
+        $articleTitles.css({
+          position: 'absolute'
+        });
+      } else {
+        $articlesList.css({
+          position: 'static',
+          width: 'initial'
+        });
+      }
+    }
+  }
+
+  function resizeArticleList() {
+    if (document.documentElement.clientWidth >= 752) {
       $articlesList.css({
-        position: 'fixed',
-        top: 30 + 'px',
-        left: listCoords.left + 'px'
+        width: $articlesWidth.outerWidth()
       });
     } else {
       $articlesList.css({
-        position: 'static',
         width: 'initial'
       });
     }
   }
 
-  if ($articlesList.length && $articles.length) {
-    $articlesList.css({
-      width: $articlesList.outerWidth()
+  function asideClose() {
+    $articleTitles.css({
+      right: '100%'
     });
+  }
 
+  function asideOpen() {
+    if (isSidebarOpen) {
+      asideClose();
+    } else {
+      $articleTitles.css({
+        right: '21%'
+      });
+    }
+    isSidebarOpen = !isSidebarOpen;
+  }
+
+  if ($articlesList.length && $articles.length) {
     // выполниться только тогда когда будет действия скроллинг
     $(WIN).scroll(() => {
-      $articlesList.css({
-        width: $articlesWidth.outerWidth()
-      });
+      resizeArticleList();
       setArticleChords();
       setArticleActive();
     });
 
-    // выполниться при загрузке кода
+    // выполнится при загрузке кода
+    resizeArticleList();
     setArticleChords();
     setArticleActive();
 
     //resize ширины списка ссылок, при изменении окна
     $(WIN).resize(() => {
-      $articlesList.css({
-        width: $articlesWidth.outerWidth()
-      });
+      resizeArticleList();
+      setArticleChords();
     });
     //плавный скролл между статьями, без мусора в адресной строке
-    $(".blog__aside-link").on("click", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href');
-        console.log(`${id}`);
-        var top = $(`${id}`).offset().top;
-        console.log(top);      
-        $('body,html').animate({scrollTop: top}, 700);
+    $('.blog__aside-link').on('click', function(event) {
+      event.preventDefault();
+      var id = $(this).attr('href');
+      console.log(`${id}`);
+      var top = $(`${id}`).offset().top;
+      console.log(top);
+      $('body,html').animate({ scrollTop: top }, 700);
     });
-
+    //открытие сайдбара на модильных девайсах
+    $('.blog__aside-open').on('click', function() {
+      asideOpen();
+    });
+    $articleTitles.on('click', function(e) {
+      if (!e.target.closest('.blog__aside-open')) {
+        asideOpen();
+      }
+    });
   }
 });

@@ -22,6 +22,7 @@
   width: 30.5%;
   padding: 5.3% 4.6% 5% 2%;
   text-align: right;
+  @include transition;
 
   @include wide {
     width: 26.4%;
@@ -29,12 +30,41 @@
   }
   @include tablets {
     position: absolute;
-    left: -35%;
+    z-index: 100;
+    right: 100%;
+    height: 100%;
+    width: 80%;
+    background-color: $color_green;
   }
   @include phones {
     position: absolute;
-    left: -45%;
-  }  
+    z-index: 100;
+    right: 100%;
+    height: 100%;
+    width: 80%;
+    background-color: $color_green;
+  }
+}
+.blog__aside-open {
+  display: none;
+  position: absolute;
+  width: 2rem;
+  height: 3rem;
+  right: 0;
+  top: 50%;
+  transform: translateX(50%);
+  background-color: #6c9c5a;
+  border-radius: 50%;
+  @include tablets {
+    display: block;
+  }
+  @include phones {
+    display: block;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 .blog__aside-item {
   &--active {
@@ -48,11 +78,23 @@
       top: 50%;
       transform: translateY(-50%);
       border-right: 3px solid $color_green_hover;
+      @include tablets {
+        border-right: 3px solid $color_white;
+      }
+      @include phones {
+        border-right: 3px solid $color_white;
+      }
     }
 
     .blog__aside-link {
       @include font-roboto(16px, 700);
       color: $color_green_hover;
+      @include tablets {
+        color: $color_white;
+      }
+      @include phones {
+        color: $color_white;
+      }
     }
   }
 }
@@ -63,6 +105,13 @@
   margin: 0.8rem 0 0.8rem 1rem;
   @include font-roboto(16px, 400);
   line-height: 1.65rem;
+
+  @include tablets {
+    color: $color_white;
+  }
+  @include phones {
+    color: $color_white;
+  }
 }
 
 .blog__main {
@@ -81,22 +130,22 @@
   @include phones {
     width: 100%;
     padding: 2.8rem 1rem 2.8rem 1.2rem;
-  }  
+  }
 }
 
 .blog__article {
   margin-top: 4rem;
   padding-bottom: 4.375rem;
-  border-bottom: 5px solid rgba($color_gray, 0.07);   
-  
+  border-bottom: 5px solid rgba($color_gray, 0.07);
+
   @include tablets {
     margin-top: 3rem;
-    padding-bottom: 3rem;    
+    padding-bottom: 3rem;
   }
   @include phones {
     margin-top: 2rem;
-    padding-bottom: 1rem;  
-  }  
+    padding-bottom: 1rem;
+  }
 
   &:first-child {
     margin-top: 0;

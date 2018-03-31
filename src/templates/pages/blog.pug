@@ -30,9 +30,8 @@ block content
             .hero__top-right
                 .hamburger                
                     a(href='#' class='hamburger__link') Меню
-                        //- svg(class='hamburger__svg')
-                        //-     use(xlink:href='assets/images/sprite.svg#hamburger') 
-                                
+                        .hamburger__line
+
         .hero__center.hero__center--blog
             .user
                 .user__pic
@@ -75,6 +74,7 @@ block content
                 each item, index in articleList
                     li(id=`${index}`).blog__aside-item
                         a(href=`#a${index}` class='blog__aside-link')= item[0]  
+            .blog__aside-open
         main.blog__main
             ul.blog_article-list
                 - for (var i=0; i<4; i++)           
