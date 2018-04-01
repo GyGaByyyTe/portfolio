@@ -1,4 +1,5 @@
-{
+module.exports = function () {
+    
     const DOC = document;
     const WIN = window;
 
@@ -19,4 +20,4 @@
                 }
             });
     });
-}
+};

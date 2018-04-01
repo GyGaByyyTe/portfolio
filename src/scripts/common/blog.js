@@ -1,4 +1,4 @@
-$(document).ready(function() {
+module.exports = function () {
   const WIN = window;
   const DOC = document;
   const $articles = $('.blog__article'); // статьи справа
@@ -137,9 +137,7 @@ $(document).ready(function() {
     $('.blog__aside-link').on('click', function(event) {
       event.preventDefault();
       var id = $(this).attr('href');
-      console.log(`${id}`);
       var top = $(`${id}`).offset().top;
-      console.log(top);
       $('body,html').animate({ scrollTop: top }, 700);
     });
     //открытие сайдбара на модильных девайсах
@@ -152,4 +150,4 @@ $(document).ready(function() {
       }
     });
   }
-});
+};

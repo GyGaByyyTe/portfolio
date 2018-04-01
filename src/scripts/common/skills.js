@@ -1,4 +1,5 @@
-$(document).ready(function() {
+module.exports = function() {
+
   const WIN = window;
   const DOC = document;
   const $skills = $('#skills'); // блок скилов
@@ -30,7 +31,6 @@ $(document).ready(function() {
     const elemCoords = getCoords($skills[0]);
 
     if (WIN.pageYOffset >= elemCoords.top - (elemCoords.top/3)) {
-      console.log('hello');
       isShow = true;
 
       circles.forEach(circle => {
@@ -44,4 +44,5 @@ $(document).ready(function() {
       checkSkills();
     }
   });
-});
+
+};
